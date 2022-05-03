@@ -1,18 +1,5 @@
+<?php include "data.php";?>
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, 'restaurant');
-
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    }
-    echo "Connected successfully";
-
-
 
 
         $email= $_POST["email"];
@@ -20,15 +7,11 @@
         $password = hash ( 'sha256' , $_POST[ "password" ]);
         $nome= $_POST["nome"];
         $cognome= $_POST["cognome"];
-        $città= $_POST["citta"];
-        $via= $_POST["via"];
-        $civico= $_POST["civico"];
         $telefono= $_POST["telefono"];	
-        $img="";
 
 
             $sql = "INSERT INTO utente
-            VALUES ('{$email}','{$nome}','{$cognome}','{$città}','{$via}','{$civico}','{$telefono}','{$password}','{$img}')";
+            VALUES (id, '{$nome}','{$cognome}', '{$tel}','{$email}','{$password}')";
         
     if ($conn->query($sql) === TRUE) {
             header("location: index.php");
