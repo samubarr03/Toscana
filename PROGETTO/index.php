@@ -82,6 +82,7 @@
               <p>Le persone che hanno lavorato a questo progetto.</p>
             </div>
           </div>
+        
           <div class="col-lg-8">
             <div class="row">
 
