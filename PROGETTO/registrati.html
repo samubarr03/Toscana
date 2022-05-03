@@ -2,88 +2,57 @@
 <html>
 	<head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="homepage.css">
+	<link rel="stylesheet" href="style.css">
 	<title>Register</title>
 	<link rel="icon" type="image/x-icon" href="immagini/icon.png">
-	<style>
-	body{
-		background-color: #ff6900;
-		height: 550px;
-		padding-top: 30px;
-		font-size: 20px;
-	}
-	p{
-	text-align : left;
-	}
-	.registrati{
-		text-align : center;
-		background-repeat: no-repeat;
-		background-attachment: fixed; 
-		background-size: 100% 100%;
-		margin: auto;
-		width: 30%;
-		height: 800px;
-		border: 2px solid black;
-		padding: 10px;
-		background-color: grey;
-		border-radius: 12px;
-	}
-	
-	input[type=text], input[type=password]{
-		width: 100%;
-		padding: 12px 20px;
-		margin: 8px 0;
-		display: inline-block;
-		border: 1px solid black;
-		box-sizing: border-box;
-		border-radius: 12px;
-	}
-	
-	input[type=submit]{
-		border: 2px solid black;
-		background-color: grey;
-		color: black;
-		padding: 14px 20px;
-		margin: 8px 0;
-		cursor: pointer;
-		width: 90%;
-		border-radius: 12px;
-	}
-	
-	button:hover{
-		opacity: 0.8;
-	}
-	
-	input[type=submit]:hover{
-		opacity: 0.8;
-	}
-	
-	</style>
+
 	</head>
 	<body>
-	<h3><a href = "login.html" style = "text-decoration: none; color:black;">˂ Login </a></h3>
-		<div class = "registrati">
-		<p style = "text-align: center;">REGISTRATI</p>
-			<form action="save_user.php" method="post">
-				<p>Nome*</p>
-				<input type = "text" id = "nome" placeholder="Inserisci il tuo nome" name="nome"><br>
-				<p>Cognome</p>
-				<input type = "text" id = "cognome" placeholder="Inserisci il tuo cognome" name="cognome"><br>
-				<p>Password*</p>
-				<input type = "password" id = "password" placeholder="Scegli una password" name="password" required><br>
-				<p>Email*</p>
-				<input type = "text" id = "email" placeholder="Inserisci la tua email" name="email">
-				<p>Città</p>
-				<input type = "text" id = "Citta" placeholder="Inserisci la tua Città" name="citta"><br>
-				<p>Via</p>
-				<input type = "text" id = "via" placeholder="Inserisci la tua via" name="via"><br>
-				<p>Civico</p>
-				<input type = "text" id = "civico" placeholder="Inserisci il tuo civico" name="civico"><br>
-				<p>Telefono*</p>
-				<input type = "text" id = "telefono" placeholder="Inserisci il tuo telefono" name="telefono"><br>
-				<p>( * Campi obbligatori)</p>
-				<input type="submit" name="register" value = "INVIO">
-			</form>
-		</div>
+		<!DOCTYPE html>
+		
+		<html lang="en" dir="ltr">
+		  <head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+			<link rel="stylesheet" href="style.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+		  </head>
+		  <body>
+			<div class="container">
+			  <div class="wrapper">
+				<div class="title"><span>Registrati</span></div>
+				<form action="#">
+				  <div class="row">
+					<i class="fas fa-user"></i>
+					<input type="text" placeholder="Email" required>
+				  </div>
+				  <div class="row">
+					<i class="fas fa-lock"></i>
+					<input type="password" placeholder="Password" required>
+				  </div>
+				  <div class="row">
+					<i class="fas fa-user"></i>
+					<input type="text" placeholder="Nome" required>
+				  </div>
+				  <div class="row">
+					<i class="fas fa-user"></i>
+					<input type="text" placeholder="Cognome" required>
+				  </div>
+				  <div class="row">
+					<i class="fas fa-user"></i>
+					<input type="text" placeholder="Telefono" required>
+				  </div>
+				  <div class="row button">
+					<input type="submit" value="Registrati">
+				  </div>
+				  <div class="signup-link">Sei già registrato? <a href="#">Accedi</a></div>
+				</form>
+			  </div>
+			</div>
+		
+		  </body>
+		</html>
+		
 	</body>
 </html>
