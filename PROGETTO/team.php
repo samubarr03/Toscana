@@ -40,10 +40,11 @@
             </div>
           </div>
         
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="row">
+
               <!--  SACCO -->
-              <div class="col-lg-6">
+              <div class="col-lg-4">
                 <div class="member" data-aos="zoom-in" data-aos-delay="100">
                   <div class="pic"><img src="img/sacco.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
@@ -61,7 +62,7 @@
               </div><!--  fine SACCO -->
 
               <!--  CUSA -->
-              <div class="col-lg-6 mt-4 mt-lg-0">
+              <div class="col-lg-4 mt-0 mt-lg-0">
                 <div class="member" data-aos="zoom-in" data-aos-delay="200">
                   <div class="pic"><img src="img/cusa.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
@@ -79,7 +80,7 @@
               </div><!--  fine CUSA -->
 
               <!--  BARRAGO -->
-              <div class="col-lg-6 mt-4 mt-lg-0">
+              <div class="col-lg-4 mt-4 mt-lg-0">
                 <div class="member" data-aos="zoom-in" data-aos-delay="300">
                   <div class="pic"><img src="img/barrago.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">

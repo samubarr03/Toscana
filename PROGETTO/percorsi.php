@@ -30,6 +30,8 @@
   text-align: center;
   font-family: arial;
   background-color: #dfffde;
+  border: 1px solid rgba(0,0,0,.125);
+ border-radius: 1rem;
 }
 
 .price {
@@ -56,18 +58,18 @@
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 42px;
   color: #011a00;
 }
 #hero p{
     margin: 0 0 3px 0;
     font-size: 20px;
-    font-weight: 700;
     color: #000; 
 }
 #hero .price {
   color: #009970;
   font-size: 200%;
+  font-weight: 500;
 }
 </style>
 <body>
@@ -88,7 +90,7 @@
             <img src="img/firenzegiotto.webp" alt="Denim Jeans" style="width:100%">
             <h1>Tour master</h1>
             <p class="price">$9.99</p>
-            <p>Include la maggior parte delle attrazioni Toscane e vi offrirà un'immersione in maniera approfondita.</p>
+            <p>Include la maggior parte delle attrazioni Toscane e vi offrirà un'immersione in maniera approfondita e precisa.</p>
             <p><button>Compra</button></p>
             </div>
 
