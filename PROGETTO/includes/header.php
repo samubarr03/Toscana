@@ -1,14 +1,18 @@
 <?php
-$admin=0;
+ 
+  include "data.php";
 
 
-if(!isset($_SESSION['email'])){
+  $admin=0;
+
+
+  if(!isset($_SESSION['email'])){
 	//
-		$logged = '<a href="login.html">Accedi</a>';
+		$logged = '<a class="nav-link " href="login.html">Accedi</a>';
 
 	}
 	else{
-		$logged = '<a href="profilo.php"> Loggato</a>';
+		$logged = '<a href="profilo.php"> Profilo</a>';
         if($_SESSION['email']=="admin@gmail.com"){
             $admin=1;    
         }
@@ -19,7 +23,6 @@ if(!isset($_SESSION['email'])){
 ?>
 
 
-<!-- ======= Header ======= -->
 
 
 <header id="header" class="fixed-top d-flex align-items-center">
@@ -27,21 +30,19 @@ if(!isset($_SESSION['email'])){
       <div class="header-container d-flex align-items-center justify-content-between">
         <div class="logo">
           <h1 class="text-light"><a href="index.php"><span>ToscanaTour</span></a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html"><img src="img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
-            <li><a class="nav-link scrollto" href="tour.php">Tour</a></li>
-            <li><a class="nav-link scrollto" href="#team">Team</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li><a class="nav-link active" href="index.php">Home</a></li>
+            <li><a class="nav-link" href="tour.php">Tour</a></li>
+            <li><a class="nav-link" href="team.php">Team</a></li>
+            <li><a class="nav-link" href="contatti.php">Contatti</a></li>
             <li><?php echo $logged; ?></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+        </nav>
 
-      </div><!-- End Header Container -->
+      </div>
 </div>
-  </header><!-- End Header -->
+  </header>

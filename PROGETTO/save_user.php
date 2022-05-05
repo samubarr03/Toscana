@@ -3,22 +3,25 @@
 
 
         $email= $_POST["email"];
-        $pw= $_POST["password"];
         $password = hash ( 'sha256' , $_POST[ "password" ]);
         $nome= $_POST["nome"];
         $cognome= $_POST["cognome"];
-        $telefono= $_POST["telefono"];	
+        $tel= $_POST["telefono"];	
 
 
             $sql = "INSERT INTO utente
             VALUES (id, '{$nome}','{$cognome}', '{$tel}','{$email}','{$password}')";
         
     if ($conn->query($sql) === TRUE) {
-            header("location: index.php");
+            //header("location: index.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
+      echo $nome;
+      echo $cognome;
+      echo $email;
+      echo $tel;
 
 ?>
 <html>

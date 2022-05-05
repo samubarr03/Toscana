@@ -93,7 +93,7 @@
             </div>
 
             <div class="card" style="float: left; margin-left:3%;">
-            <img src="img/collagetoscana.jpg" alt="Denim Jeans" style="float-left:5%; width:90%; float-left:5%;">
+            <img src="img/collagetoscana.jpg" alt="Denim Jeans" style="float-left:5%; width:90%;">
             <h1>Advancend tour</h1>
             <p class="price"><font color="red"><DEL>$19.99</del></font> $14.99</p>
             <p>Questo tour comprende TUTTI i punti di interesse della nostra amata Toscana e vi farà conoscere tuttI i segreti della regione.</p>

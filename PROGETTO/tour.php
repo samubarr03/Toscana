@@ -6,15 +6,7 @@
 
   <title>Toscana Tour</title>
 
-  <!-- Importa CSS -->
-  <link href="css/aos.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/boxicons.min.css" rel="stylesheet">
-  <link href="css/glightbox.min.css" rel="stylesheet">
-  <link href="css/remixicon.css" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <?php include "includes/css.html"; ?>
 
 </head>
 
@@ -23,51 +15,18 @@
   <?php include "includes/header.php";?>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="hero" class="d-flex align-items-center" style="background:url(img/hero_toscana.jpg)">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
-      <h1>Toscana Tour</h1>
+      <h1>TOUR</h1>
       <h2>I migliori percorsi e luoghi da visitare della Toscana</h2>
-      <a href="tour.php" class="btn-get-started scrollto">VAI AI TOUR</a>
+      <a href="login.php" class="btn-get-started scrollto">ACCEDI</a>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
     
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="100">
-            <img src="img/clients/airbnblogo.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="200">
-            <img src="img/clients/logobooking.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="300">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="400">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="500">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="600">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
-
+  <?php include "includes/clienti.html";?>
+    
   </main><!-- End #main -->
 
   <?php include "includes/footer.html";?>
@@ -76,14 +35,14 @@
 
   
   <!-- Importa JS-->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="js/purecounter.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/glightbox.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -22,32 +22,34 @@
 			<div class="container">
 			  <div class="wrapper">
 				<div class="title"><span>Registrati</span></div>
-				<form action="#">
+				<form action="save_user.php" method="post">
 				  <div class="row">
 					<i class="fas fa-user"></i>
-					<input type="text" placeholder="Email" required>
+					<input type="text" id="email" placeholder="email" name="email" required>
 				  </div>
 				  <div class="row">
 					<i class="fas fa-lock"></i>
-					<input type="password" placeholder="Password" required>
+					<input type="password"  id="password" placeholder="Password" name="password" required>
 				  </div>
 				  <div class="row">
 					<i class="fas fa-user"></i>
-					<input type="text" placeholder="Nome" required>
+					<input type="text"  id="nome" placeholder="Nome" name="nome" required>
 				  </div>
 				  <div class="row">
 					<i class="fas fa-user"></i>
-					<input type="text" placeholder="Cognome" required>
+					<input type="text"  id="cognome" placeholder="Cognome" name="cognome" required>
 				  </div>
 				  <div class="row">
 					<i class="fas fa-user"></i>
-					<input type="text" placeholder="Telefono" required>
+					<input type="text"  id="telefono"  placeholder="Telefono" name="telefono" required>
 				  </div>
 				  <div class="row button">
 					<input type="submit" value="Registrati">
 				  </div>
-				  <div class="signup-link">Sei già registrato? <a href="#">Accedi</a></div>
+				  <div class="signup-link">Sei già registrato? <a href="login.html">Accedi</a></div>
+				  <div class="signup-link"> <a href="index.php">Torna alla home</a></div>
 				</form>
+
 			  </div>
 			</div>
 		

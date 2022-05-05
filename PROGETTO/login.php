@@ -1,18 +1,7 @@
 <?php
 	session_start();
 
-	$servername = "localhost";
-    $username = "root";
-    $password = "";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, 'restaurant');
-
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    }
-
+    include "data.php";
 	$email = $_POST["email"];
 	$password = hash('sha256', $_POST["password"]);
 		
@@ -28,11 +17,12 @@
 	}	
 	else{
 		echo '<script>alert("Email o password errate")</script>';
-		header("location: login.html");
+		//header("location: login.html");
 
 	}
 	
-
+	echo $email;
+	echo $password;
 ?>	
 <!--
 <html>

@@ -12,6 +12,7 @@
 		
 		<html lang="en" dir="ltr">
 		  <head>
+			<link rel="stylesheet" href="style.css">
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			
@@ -22,20 +23,21 @@
 			<div class="container">
 			  <div class="wrapper">
 				<div class="title"><span>Login Form</span></div>
-				<form action="#">
+				<form action="login.php" method="post">
 				  <div class="row">
 					<i class="fas fa-user"></i>
-					<input type="text" placeholder="Email" required>
+					<input type="text" placeholder="Email" name="email" required>
 				  </div>
 				  <div class="row">
 					<i class="fas fa-lock"></i>
-					<input type="password" placeholder="Password" required>
+					<input type="password" placeholder="Password" name="password" required>
 				  </div>
 				  <div class="pass"><a href="#">Forgot password?</a></div>
 				  <div class="row button">
 					<input type="submit" value="Login">
 				  </div>
-				  <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+				  <div class="signup-link">Non ti si ancora registato? <a href="registrati.html">Registrati</a></div>
+				  <div class="signup-link"> <a href="index.php">Torna alla home</a></div>
 				</form>
 			  </div>
 			</div>

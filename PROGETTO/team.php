@@ -81,7 +81,7 @@
               <!--  BARRAGO -->
               <div class="col-lg-6 mt-4 mt-lg-0">
                 <div class="member" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="pic"><img src="img.jpg" class="img-fluid" alt=""></div>
+                  <div class="pic"><img src="img/.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
                     <h4>Samuele Barrago</h4>
                     <span>CTO</span>
