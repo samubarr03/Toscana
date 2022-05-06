@@ -9,17 +9,7 @@
 
   <title>Il nostro TEAM</title>
 
-  <!-- Importa CSS -->
-  <link href="css/aos.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/boxicons.min.css" rel="stylesheet">
-  <link href="css/glightbox.min.css" rel="stylesheet">
-  <link href="css/remixicon.css" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-
-  <link href="img/toscana.png" rel="icon">
+  <? include "includes/css.html";?>
 
 </head>
 <style>

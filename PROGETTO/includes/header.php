@@ -8,7 +8,7 @@
 
   if(!isset($_SESSION['email'])){
 	//
-		$logged = '<a class="nav-link " href="login.html">Accedi</a>';
+		$logged = '<a class="nav-link " href="login.html">Accedi</a> ';
 
 	}
 	else{
@@ -31,7 +31,6 @@
         <div class="logo">
           <h1 class="text-light"><a href="index.php"><span>ToscanaTour</span></a></h1>
         </div>
-
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link active" href="index.php">Home</a></li>
