@@ -116,16 +116,22 @@ session_start();
 
 <body>
 
-<?php 
-
-    include "includes/header.php"; 
-  ?>
+  <?php include "includes/header.php"; ?>
 
 <br><br><br>
-<hr>
+
+  <section class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>Profilo</h1>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main"><!-- Inizio #main -->
 
 <div class="container">
     <div class="main-body">
+
+        <!--<h1>Profilo</h1>-->
     
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
@@ -134,11 +140,9 @@ session_start();
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://termoidraulicabassini.it/wp-content/uploads/2015/12/utente.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>John Doe</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
+                      <h4><input name="nome" ID="abc" type="text" value=<?php echo $row['nome'];?> readonly><input name="cognome" ID="abc" type="text" value=<?php echo $row['cognome']; ?> readonly></h4>
+                      <p class="text-secondary mb-1"></p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                      <button class="btn btn-primary">Follow</button>
-                      <button class="btn btn-outline-primary">Message</button>
                     </div>
                   </div>
                 </div>
@@ -153,7 +157,7 @@ session_start();
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    <input name="cognome" ID="abc" type="text" value=<?php echo $row['nome']; ?>>
+                    <input name="nome" ID="abc" type="text" value=<?php echo $row['nome']; ?>>
                     </div>
                   </div>
                   <hr>
@@ -171,16 +175,16 @@ session_start();
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <input name="email" ID="abc" type="text" value=<?php echo $row['email']; ?> readonly >
+                      <input name="email" ID="abc" type="text" value=<?php echo $row['email']; ?> readonly>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Mobile</h6>
+                      <h6 class="mb-0">Telefono</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      (320) 380-4539
+                      <input name="tel" ID="abc" type="text" value=<?php echo $row['tel']; ?> readonly>
                     </div>
                   </div>
                   <hr>
@@ -202,7 +206,7 @@ session_start();
               </div>
 
             
-                
+
 
 
 
@@ -211,6 +215,7 @@ session_start();
 
         </div>
     </div>
+    </main><!-- Fine #main -->
 
 <!--
 <div class="profilo">
