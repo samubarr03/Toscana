@@ -12,99 +12,104 @@
 
 </head>
 <style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  background-color: #dfffde;
-  border: 1px solid rgba(0,0,0,.125);
- border-radius: 1rem;
-}
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: #dfffde;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+  }
 
-.price {
-  color: #009970;
-  font-size: 200%;
-}
+  .price {
+    color: #009970;
+    font-size: 200%;
+  }
 
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #009970;
-  text-align: center;
-  cursor: pointer;
-  width: 60%;
-  font-size: 18px;
-}
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #009970;
+    text-align: center;
+    cursor: pointer;
+    width: 60%;
+    font-size: 18px;
+  }
 
-.card button:hover {
-  opacity: 0.7;
-}
-#percorsi h1 {
-  margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 42px;
-  color: #011a00;
-}
-#percorsi p{
-    margin: 0 0 3px 0;
-    font-size: 20px;
-    color: #000; 
-}
-#percorsi .price {
-  color: #009970;
-  font-size: 200%;
-  font-weight: 500;
-}</style>
+  .card button:hover {
+    opacity: 0.7;
+  }
+  #percorsi h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 42px;
+    color: #011a00;
+  }
+  #percorsi p{
+      margin: 0 0 3px 0;
+      font-size: 20px;
+      color: #000; 
+  }
+  #percorsi .price {
+    color: #009970;
+    font-size: 200%;
+    font-weight: 500;
+  }
+</style>
+
 <body>
 
   <?php include "includes/header.php";?>
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center" style="background:url(img/hero_toscana.jpg)">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
       <h1>TOUR</h1>
       <h2>I migliori percorsi e luoghi da visitare della Toscana</h2>
-      <!--<a href="" class="btn-get-started scrollto">ACCEDI</a>-->
+      <!--<a href="" class="btn-get-started">ACCEDI</a>-->
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
     
   <?php include "includes/clienti.html";?>
     
-  </main><!-- End #main -->
   <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
     <div class="Percorsi" >
-            <div class="card" style="float: left; position:relative ">
-            <img src="img/pisatower.jpg" alt="Denim Jeans" style="width:100%; border-radius:1.1rem;">
-            <h1>Tour base</h1>
-            <p class="price">GRATIS</p>
-            <p>Questo percorso include tutte le attrazioni della Toscana, andando a toccare i cardini della Toscana in generale.</p>
-            <p><button>Vai subito</button></p>
-            </div>
+      <div class="card" style="float: left; position:relative ">
+        <img src="img/pisatower.jpg" alt="Denim Jeans" style="width:100%; border-radius:1.1rem;">
+        <h1>Tour base</h1>
+          <p class="price">GRATIS</p>
+          <p>Questo percorso include tutte le attrazioni della Toscana, andando a toccare i cardini della Toscana in generale.</p>
+          <p><button>Vai subito</button></p>
+      </div>
 
-            <div class="card" style="float: left; margin-left:3%;">
-            <img src="img/firenzegiotto.webp" alt="Denim Jeans" style="width:100%; border-radius:1.1rem;">
-            <h1>Tour master</h1>
-            <p class="price">$9.99</p>
-            <p>Include la maggior parte delle attrazioni Toscane e vi offrirà un'immersione in maniera approfondita e precisa.</p>
-            <p><button>Compra</button></p>
-            </div>
+      <div class="card" style="float: left; margin-left:3%;">
+        <img src="img/firenzegiotto.webp" alt="Denim Jeans" style="width:100%; border-radius:1.1rem;">
+        <h1>Tour master</h1>
+          <p class="price">$9.99</p>
+          <p>Include la maggior parte delle attrazioni Toscane e vi offrirà un'immersione in maniera approfondita e precisa.</p>
+          <p><button>Acquista</button></p>
+      </div>
 
-            <div class="card" style="float: left; margin-left:3%;">
-            <img src="img/collagetoscana.jpg" alt="Denim Jeans" style=" border-radius:1.1rem; width:100%;">
-            <h1>Advancend tour</h1>
-            <p class="price"><font color="red"><DEL>$19.99</del></font> $14.99</p>
-            <p>Questo tour comprende TUTTI i punti di interesse della nostra amata Toscana e vi farà conoscere tuttI i segreti della regione.</p>
-            <p><button>Compra</button></p>
-            </div>
-            <div style="clear: both">
-    </div></div>
+      <div class="card" style="float: left; margin-left:3%;">
+        <img src="img/collagetoscana.jpg" alt="Denim Jeans" style=" border-radius:1.1rem; width:100%;">
+        <h1>Advancend tour</h1>
+          <p class="price"><font color="red"><DEL>$19.99</del></font> $14.99</p>
+          <p>Questo tour comprende TUTTI i punti di interesse della nostra amata Toscana e vi farà conoscere tuttI i segreti della regione.</p>
+          <p><button>Acquista</button></p>
+      </div>
+      <div style="clear: both">
+      </div>
+    </div>
+  </div>
+  
+    </main><!-- End #main -->
+
   <?php include "includes/footer.html";?>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
