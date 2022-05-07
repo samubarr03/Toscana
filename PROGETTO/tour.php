@@ -6,7 +6,10 @@
 
   <title>Toscana Tour</title>
 
-  <?php include "includes/css.html"; ?>
+  <?php 
+    session_start();
+    include "includes/css.html"; 
+  ?>
 
 </head>
 <style>
@@ -96,7 +99,7 @@
 
       <div class="card" style="float: left; margin-left:3%;">
         <img src="img/collagetoscana.jpg" alt="Denim Jeans" style=" border-radius:1.1rem; width:100%;">
-        <h1>Advancend tour</h1>
+        <h1>Advanced tour</h1>
           <p class="price"><font color="red"><DEL>$19.99</del></font> $14.99</p>
           <p>Questo tour comprende TUTTI i punti di interesse della nostra amata Toscana e vi farà conoscere tuttI i segreti della regione.</p>
           <p><button>Acquista</button></p>

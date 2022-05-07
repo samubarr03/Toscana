@@ -8,11 +8,11 @@
 
   if(!isset($_SESSION['email'])){
 	//
-		$logged = '<a class="nav-link " href="login.html">Accedi</a> ';
+		$logged = '<a class="nav-link" href="login.html">Accedi </a> ';
 
 	}
 	else{
-		$logged = '<a href="profilo.php"> Profilo</a>';
+		$logged = '<a href="profilo.php">Profilo </a>';
         if($_SESSION['email']=="admin@gmail.com"){
             $admin=1;    
         }
