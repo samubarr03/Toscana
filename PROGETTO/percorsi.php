@@ -98,19 +98,23 @@
   <?php include "includes/clienti.html";?>
     
   </main><!-- End #main -->
-  <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
-    <div style="carte">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
+        <div class="row">
+            <div class="col-lg">
             <?php
-                $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));			
+                $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
+                		
                 if(mysqli_num_rows($resultset) > 0)
                     {
+                        
                         while($row = mysqli_fetch_array($resultset))
                         {
                             component($row['nome'], $row['descrizione']);
                         }
                     }    
                     ?>
-        
+            </div>
+        </div>
     </div>
   <?php include "includes/footer.html";?>
 

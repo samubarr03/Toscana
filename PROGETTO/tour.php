@@ -81,14 +81,15 @@
     
   <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
     <div class="Percorsi" >
+    <a href="percorsi.php">
       <div class="card" style="float: left; position:relative ">
         <img src="img/pisatower.jpg" alt="Denim Jeans" style="width:100%; border-radius:1.1rem;">
         <h1>Tour base</h1>
           <p class="price">GRATIS</p>
           <p>Questo percorso include tutte le attrazioni della Toscana, andando a toccare i cardini della Toscana in generale.</p>
-          <p><button>Vai subito</button></p>
+          <p><a href="percorsi.php"><button>Vai subito</button></a></p>
       </div>
-
+      </a>
       <div class="card" style="float: left; margin-left:3%;">
         <img src="img/firenzegiotto.webp" alt="Denim Jeans" style="width:100%; border-radius:1.1rem;">
         <h1>Tour master</h1>
