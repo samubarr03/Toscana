@@ -6,7 +6,10 @@
 
   <title>Toscana Tour</title>
 
-  <?php include "includes/css.html"; ?>
+  <?php 
+    session_start();
+    include "includes/css.html"; 
+  ?>
 
 </head>
 

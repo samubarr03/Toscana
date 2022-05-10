@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 	if(!isset($_SESSION['email'])){
@@ -58,7 +57,7 @@ session_start();
                       <h4><?php echo $row['nome'] . " " . $row['cognome'];?></h4><br>
                       <div class="row">
                         <div class="col-sm-12">
-                          <a class="btn btn-info" target="__blank" href="">Modifica</a>
+                          <a class="btn btn-info " target="__blank" href="">Modifica</a>
                         </div>
                       </div>
                     </div>
@@ -155,7 +154,6 @@ session_start();
       </div> 
     </div>
       </div>  -->
-        <br><br>
 
   <?php include "includes/footer.html";?>
 
