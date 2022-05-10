@@ -88,3 +88,11 @@ INSERT INTO Citta VALUES (id, 'Massa', 'bella città', '' );
 INSERT INTO Citta VALUES (id, 'Carrara', 'bella città', '' );
 INSERT INTO Citta VALUES (id, 'Lucca', 'bella città', '' );
 INSERT INTO Citta VALUES (id, 'Arezzo', 'bella città', '' );
+
+ 
+INSERT INTO Percorso VALUES (id, 'Firenze', 'La città di Firenze, fondata sulle sponde del fiume Arno, è il capoluogo della Toscana ed è il centro dell'area metropolitana Firenze-Prato-Pistoia, nonché l'ottavo comune in Italia per popolazione ( circa 380 mila abitanti ).');
+INSERT INTO Percorso VALUES (id, 'Pisa', 'bella città' );
+INSERT INTO Percorso VALUES (id, 'Siena', 'bella città' );
+INSERT INTO Percorso VALUES (id, 'Volterra', 'bella città');
+INSERT INTO Percorso VALUES (id, 'Livorno', 'bella città');
+INSERT INTO Percorso VALUES (id, 'San Gimignano', 'bella città');

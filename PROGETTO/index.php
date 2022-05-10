@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -38,21 +40,21 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/pisacarosello.jpg" class="d-block w-100" alt="...">
+      <img src="https://wallpapercave.com/wp/wp6966225.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/hero_toscana.jpg" class="d-block w-100" alt="...">
+      <img src="https://wallpapercave.com/wp/wp6966233.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/hero_toscana.jpg" class="d-block w-100" alt="...">
+      <img src="https://wallpapercave.com/wp/wp5454438.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>
