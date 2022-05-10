@@ -13,9 +13,11 @@
     <!--<?php include "includes/header.php";?>-->
     <div><h1>[Nome percorso]</h1></div> 
     <div class="GoogleMaps">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46146.880638254755!2d10.360358803677867!3d43.7068074009471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d5919af0f6598f%3A0xaab80fb5a78478c8!2sPisa%20PI!5e0!3m2!1sit!2sit!4v1652174831666!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="PartePHP">
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13HneMkDTtdzquIdWYzWOFP7nxyMa_JOh&ehbc=2E312F" width="33%" height="480PX"></iframe>
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1sEiqPOo2GQZRr4srHdv06ThktycSTbDp&ehbc=2E312F" width="33%" height="480"></iframe>
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ZgeD_6OPHjjM1RoZvbX4P0jzdWYP97Hf&ehbc=2E312F" width="33%" height="480"></iframe></div>
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1npEowYbBYnIFi9bDHR8mBtrd9cfHOges&ehbc=2E312F" width="640" height="480"></iframe>
+        <div class="PartePHP">
         INSERISCI QUI
     </div>
     <div class="InfoEQR">
