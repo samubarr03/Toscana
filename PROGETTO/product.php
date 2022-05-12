@@ -1,35 +1,31 @@
 <?php
 
-
-
-function component($nome, $descrizione){
+function component($nome){
     $element =
     
         "<style>
-        
-    </style> 
+            .nome_percorso{
+                color: #009970;
+                background-color: red;
+            }
+            .rettangolo_percorso{
+                background-color: red;
+            }
+        </style> 
     <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
-    <div class=\"row\">
-        <div class=\"col-lg\">
-
+        <div class=\"row\">
+            <div class=\"col-lg\">
+            <div class=\"rettangolo_percorso\">
+                <a class=\"nome_percorso\" href=\"percorsi.php?action=$nome\">
                         <center><div class=\"card-body\">
                             <h5 class=\"card-title\">$nome</h5>
                             <h6>
-                                <i class=\"fas fa-star\"></i>
-                                <i class=\"fas fa-star\"></i>
-                                <i class=\"fas fa-star\"></i>
-                                <i class=\"fas fa-star\"></i>
-                                <i class=\"far fa-star\"></i>
+                                <i class=\"fas fa-star\">$descrizione</i>
                             </h6>
-                            <p class=\"card-text\">
-
-                            </p>
-                            <h5>
-                                
-                                <span class=\"price\">€$descrizione</span>
-                            </h5>
+                        
+        </a>
+        </div>
                             
-                    
                         ";     
                         if(isset($_SESSION['email'])){
                         if($_SESSION['email']=="admin@gmail.com"){
@@ -40,13 +36,24 @@ function component($nome, $descrizione){
                         }   
                     }
                         $element=$element."          
+                            </div>
                         </div>
                     </div>
-                    </div><hr>
+                    
+                    <hr>
     ";
     echo $element;
 }
 
+function genera($nome,$img,$descrizione){
+    $element =
+    
+        "<style>
+        
+        </style> 
+
+    ";
+    echo $element;
+}
 
 ?>
-

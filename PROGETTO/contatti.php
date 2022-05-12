@@ -37,8 +37,8 @@
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
             <div class="section-title">
-              <h2>Contact</h2>
-              <p>In seguito trovete i nostri </p>
+              <h2>Contatti</h2>
+              <p>Di seguito troverete i contatti dei creator del Toscana Tour.</p>
             </div>
           </div>
 

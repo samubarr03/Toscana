@@ -83,28 +83,32 @@
     <div class="Percorsi" >
     <a href="percorsi.php">
       <div class="card" style="float: left; position:relative ">
-        <img src="img/pisatower.jpg" alt="Denim Jeans" style="width:100%; border-radius:1.1rem;">
+        <img src="img/pisatower.jpg" style="width:100%; border-radius:1.1rem;">
         <h1>Tour base</h1>
           <p class="price">GRATIS</p>
           <p>Questo percorso include tutte le attrazioni della Toscana, andando a toccare i cardini della Toscana in generale.</p>
           <p><a href="percorsi.php"><button>Vai subito</button></a></p>
       </div>
       </a>
+      <a href="percorsi.php">
       <div class="card" style="float: left; margin-left:3%;">
-        <img src="img/firenzegiotto.webp" alt="Denim Jeans" style="width:100%; border-radius:1.1rem;">
+        <img src="img/firenzegiotto.webp" style="width:100%; border-radius:1.1rem;">
         <h1>Tour master</h1>
           <p class="price">$9.99</p>
           <p>Include la maggior parte delle attrazioni Toscane e vi offrirà un'immersione in maniera approfondita e precisa.</p>
           <p><button>Acquista</button></p>
       </div>
+      </a>
 
+      <a href="percorsi.php">
       <div class="card" style="float: left; margin-left:3%;">
-        <img src="img/collagetoscana.jpg" alt="Denim Jeans" style=" border-radius:1.1rem; width:100%;">
+        <img src="img/collagetoscana.jpg" style=" border-radius:1.1rem; width:100%;">
         <h1>Advanced tour</h1>
           <p class="price"><font color="red"><DEL>$19.99</del></font> $14.99</p>
           <p>Questo tour comprende TUTTI i punti di interesse della nostra amata Toscana e vi farà conoscere tuttI i segreti della regione.</p>
           <p><button>Acquista</button></p>
       </div>
+      </a>
       <div style="clear: both">
       </div>
     </div>

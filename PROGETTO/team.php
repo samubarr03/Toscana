@@ -39,7 +39,7 @@
           <div class="col-lg-8">
             <div class="section-title" data-aos="fade-right">
               <h2>Team</h2>
-              <p>Le persone che hanno lavorato a questo progetto.</p>
+              <p>Le persone che hanno lavorato e reso possibile questo progetto.</p>
             </div>
           </div>
         
@@ -53,7 +53,7 @@
                   <div class="member-info">
                     <h4>Daniele Sacco</h4>
                     <span>Chief Executive Officer</span>
-                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                    <p></p>
                     <div class="social">
                       <a href=""><i class="bi bi-instagram"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -71,7 +71,7 @@
                   <div class="member-info">
                     <h4>Leonardo Cusa</h4>
                     <span>Product Manager</span>
-                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                    <p></p>
                     <div class="social">
                       <a href=""><i class="bi bi-instagram"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
@@ -89,7 +89,7 @@
                   <div class="member-info">
                     <h4>Samuele Barrago</h4>
                     <span>CTO</span>
-                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                    <p></p>
                     <div class="social">
                       <a href=""><i class="bi bi-instagram"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>

@@ -5,18 +5,20 @@
     require_once ('product.php');
     
 
-    if(!isset($_SESSION['email'])){
-	
-        $logged = '<a href="login.html" class="w3-bar-item w3-button"><img src="img/user.png" width="50" height="40">Accedi</a>';
-    
-        }
-        else{
-            $logged = '<a href="profilo.php" class="w3-bar-item w3-button"><img src = "img/utente.png" style = "width: 20px; height: 20px;">Loggato</a>';
-            
-    
-        }
+	if(!isset($_SESSION['email'])){
+	    header("location: login.html");
+	}
 
+
+    if(isset($_GET['action'])){
+        
+            $var=$_GET['nome']; 
+            
+            $sql = "SELECT * FORM Percorso where nome={$var}')";
+    }
+    else{      
         $sql = "SELECT * FROM Percorso "; 
+    }
 
 ?>    
 <!DOCTYPE html>
@@ -102,16 +104,28 @@
         <div class="row">
             <div class="col-lg">
             <?php
+            if($var){
                 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
-                		
-                if(mysqli_num_rows($resultset) > 0)
-                    {
+                            
+                if(mysqli_num_rows($resultset) > 0){
                         
-                        while($row = mysqli_fetch_array($resultset))
-                        {
-                            component($row['nome'], $row['descrizione']);
+                    while($row = mysqli_fetch_array($resultset)){
+                        genera($row['nome'],$row['map'],$row['descrizione']);
+                    }
+                }            
+
+            }    
+            else{
+                    $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
+                            
+                    if(mysqli_num_rows($resultset) > 0){
+                            
+                        while($row = mysqli_fetch_array($resultset)){
+                            component($row['nome']);
                         }
-                    }    
+                    }
+            }
+                        
                     ?>
             </div>
         </div>
