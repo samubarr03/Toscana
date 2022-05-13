@@ -10,14 +10,17 @@
 	}
 
 
-    if(isset($_GET['action'])){
-        
-            $var=$_GET['nome']; 
+    if(isset($_GET['id'])){
+
+            $get=1;
+            $id=$_GET['id']; 
+            $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
             
-            $sql = "SELECT * FORM Percorso where nome={$var}')";
     }
-    else{      
+    else{ 
+  
         $sql = "SELECT * FROM Percorso "; 
+        $get=0;
     }
 
 ?>    
@@ -104,12 +107,15 @@
         <div class="row">
             <div class="col-lg">
             <?php
-            if($var){
+            if($get){
+
                 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
-                            
+               
                 if(mysqli_num_rows($resultset) > 0){
-                        
+               
+                    
                     while($row = mysqli_fetch_array($resultset)){
+                    
                         genera($row['nome'],$row['map'],$row['descrizione']);
                     }
                 }            
@@ -121,7 +127,7 @@
                     if(mysqli_num_rows($resultset) > 0){
                             
                         while($row = mysqli_fetch_array($resultset)){
-                            component($row['nome']);
+                            component($row['nome'],$row['id']);
                         }
                     }
             }

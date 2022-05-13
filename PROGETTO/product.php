@@ -1,6 +1,6 @@
 <?php
 
-function component($nome){
+function component($nome,$id){
     $element =
     
         "<style>
@@ -12,19 +12,16 @@ function component($nome){
                 background-color: red;
             }
         </style> 
-    <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
-        <div class=\"row\">
-            <div class=\"col-lg\">
-            <div class=\"rettangolo_percorso\">
-                <a class=\"nome_percorso\" href=\"percorsi.php?action=$nome\">
-                        <center><div class=\"card-body\">
-                            <h5 class=\"card-title\">$nome</h5>
-                            <h6>
-                                <i class=\"fas fa-star\">$descrizione</i>
-                            </h6>
-                        
-        </a>
-        </div>
+        <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
+            <div class=\"row\">
+                <div class=\"col-lg\">
+                    <div class=\"rettangolo_percorso\">
+                        <a class=\"nome\" href=\"percorsi.php?id=$id\">
+                            <center><div class=\"card-body\">
+                                <h5 class=\"card-title\">$nome</h5> 
+                            </div>                       
+                        </a>
+                    </div>
                             
                         ";     
                         if(isset($_SESSION['email'])){
@@ -36,23 +33,32 @@ function component($nome){
                         }   
                     }
                         $element=$element."          
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </div>
                     
-                    <hr>
+        <hr>
+
     ";
     echo $element;
 }
 
-function genera($nome,$img,$descrizione){
-    $element =
-    
-        "<style>
-        
-        </style> 
+function genera($nome,$map,$descrizione){
+    $element = 
+        "<div class=\"container\" style=\"border-color: red\">
+            <div class=\"row\" style=\"border-color: black, width: 100%\">
+                <h1>$nome</h1>
+            </div>
+            <div class=\"row\" style=\"border-color: green\">
+                <div class=\"col-6\">
+                    $map
+                </div>
+                <div class=\"col-4\" style=\"border-color: blue\">
+                    $descrizione
+                </div>
+            </div>
+        </div>";
 
-    ";
     echo $element;
 }
 

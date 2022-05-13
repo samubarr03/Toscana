@@ -53,12 +53,11 @@
                   <div class="member-info">
                     <h4>Daniele Sacco</h4>
                     <span>Chief Executive Officer</span>
-                    <p></p>
+                    <p>Dalla 5Bii del Calvino, il GOAT</p>
                     <div class="social">
                       <a href=""><i class="bi bi-instagram"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
                       <a href=""><i class="bi bi-snapchat"></i></a>
-                      <a href=""><i class="bi bi-currency-euro"></i> </a>
                     </div>
                   </div>
                 </div>
@@ -71,12 +70,11 @@
                   <div class="member-info">
                     <h4>Leonardo Cusa</h4>
                     <span>Product Manager</span>
-                    <p></p>
+                    <p>Dalla 5Bii del Calvino, il GOAT</p>
                     <div class="social">
                       <a href=""><i class="bi bi-instagram"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
                       <a href=""><i class="bi bi-snapchat"></i></a>
-                      <a href=""><i class="bi bi-currency-euro"></i> </a>
                     </div>
                   </div>
                 </div>
@@ -89,12 +87,11 @@
                   <div class="member-info">
                     <h4>Samuele Barrago</h4>
                     <span>CTO</span>
-                    <p></p>
+                    <p>Dalla 5Bii del Calvino, il GOAT</p>
                     <div class="social">
                       <a href=""><i class="bi bi-instagram"></i></a>
                       <a href=""><i class="bi bi-facebook"></i></a>
                       <a href=""><i class="bi bi-snapchat"></i></a>
-                      <a href=""><i class="bi bi-currency-euro"></i> </a>
                     </div>
                   </div>
                 </div>

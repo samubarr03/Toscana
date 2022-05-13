@@ -39,7 +39,8 @@ password varchar(255) NOT NULL
 CREATE TABLE Percorso(
 id int AUTO_INCREMENT PRIMARY KEY,
 nome varchar(255) NOT NULL,
-descrizione varchar(255) NOT NULL
+descrizione varchar(255) NOT NULL, 
+map varchar(255)
 );
 
 
@@ -74,7 +75,7 @@ PRIMARY KEY(idPercorso, idAttrazione)
 
  
 
-INSERT INTO Percorso VALUES (id, 'Percorso Pisa', 'bella città' );
+INSERT INTO Percorso VALUES (id, 'Percorso Pisa', 'bella città','' );
 
 
 
