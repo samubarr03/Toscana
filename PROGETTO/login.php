@@ -17,7 +17,7 @@
 	}	
 	else{
 		echo '<script>alert("Email o password errate")</script>';
-		//header("location: login.html");
+		/header("location: login.html");
 
 	}
 	

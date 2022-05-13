@@ -6,15 +6,14 @@ function component($nome,$id){
         "<style>
             .nome_percorso{
                 color: #009970;
-                background-color: red;
             }
             .rettangolo_percorso{
-                background-color: red;
+                background-color: blue;
             }
         </style> 
         <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
             <div class=\"row\">
-                <div class=\"col-lg\">
+                <div class=\"col-11\">
                     <div class=\"rettangolo_percorso\">
                         <a class=\"nome\" href=\"percorsi.php?id=$id\">
                             <center><div class=\"card-body\">
@@ -22,13 +21,18 @@ function component($nome,$id){
                             </div>                       
                         </a>
                     </div>
-                            
+                </div>      
+                <div class=\"col-1\">
                         ";     
                         if(isset($_SESSION['email'])){
                         if($_SESSION['email']=="admin@gmail.com"){
                             
                             $element=$element."
-                        <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"rem\">  <a href=\"carrello.php?action=rimuovi&id=$id\">Rimuovi Dal carrello al carrello.</a><i class=\"fas fa-shopping-cart\"></i></button> </center>";
+                        <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"rem\" style=\"float: right; @media screen and (max-width: 1200px) {.rettangolo_percorso{width: 60%;} .}\">  
+                            <a href=\"carrello.php?action=rimuovi&id=$id\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
+                        </button>
+                        
+                        ";
                         
                         }   
                     }
@@ -42,6 +46,12 @@ function component($nome,$id){
     ";
     echo $element;
 }
+
+/*
+<button type=\"submit\" class=\"btn btn-warning my-3\" name=\"ad\">
+    <a href=\"carrello.php?action=aggiungi&id=$id\">Aggiungi</a><i class=\"fas fa-shopping-cart\"></i>
+</button>
+*/
 
 function genera($nome,$map,$descrizione){
     $element = 
