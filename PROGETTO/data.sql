@@ -1,18 +1,13 @@
 
 
 
-CREATE TABLE Tipologia(
-nome varchar(255) PRIMARY KEY
-);
-
-
 CREATE TABLE Attrazione(
 id int AUTO_INCREMENT PRIMARY KEY,
+nome varchar(255)NOT NULL,
 descrizione varchar(255) NOT NULL,
-immagine varchar(255) NOT NULL,
 img varchar(255),
 qr_code varchar(255) UNIQUE,
-nome_tipologia varchar(255) REFERENCES Tipologia(nome),
+
 
 );
 
@@ -75,8 +70,10 @@ PRIMARY KEY(idPercorso, idAttrazione)
 
  
 
-INSERT INTO Percorso VALUES (id, 'Percorso Pisa', 'bella città','' );
-
+INSERT INTO Percorso VALUES (id, 'Percorso Pisa', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
+INSERT INTO Attrazione VALUES (id, 'Percorso Pisa', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
+INSERT INTO Attrazione VALUES (id, 'Percorso Pisa', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
+INSERT INTO Attrazione VALUES (id, 'Percorso Pisa', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
 
 
 INSERT INTO Utente VALUES (id, 'Admin','Admin', ' 333 333 333', 'admin@gmail.com','e6fe636511f4e52b3d29fe549355fb71e76fa0ec3d394d3dd5b15303dfbf53c0')

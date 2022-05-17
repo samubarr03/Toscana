@@ -15,20 +15,15 @@
 		$_SESSION['nome'] = $row["nome"];
 		header("location: index.php");
 	}	
-	else{
-		echo '<script>alert("Email o password errate")</script>';
-		/header("location: login.html");
 
-	}
 	
-	echo $email;
-	echo $password;
+
 ?>	
-<!--
+
 <html>
 	<head>
-	<link rel="stylesheet" href="def.css">	
-		<title></title>
+	<link rel="stylesheet" href="style.css">	
+		<title> Password errata</title>
 	</head>
 	<body class="registrato">
 		<h1 class="titolino"> Email o password errati  </h1>

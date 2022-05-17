@@ -55,19 +55,22 @@ function component($nome,$id){
 
 function genera($nome,$map,$descrizione){
     $element = 
-        "<div class=\"container\" style=\"border-color: red\">
+        "
+        <hr>
+        <div class=\"container\" style=\"border-color: red\">
             <div class=\"row\" style=\"border-color: black, width: 100%\">
                 <h1>$nome</h1>
             </div>
             <div class=\"row\" style=\"border-color: green\">
                 <div class=\"col-6\">
-                    $map
+                    <img src=img/$map alt=\"Image1\" class=\"img-fluid card-img-top\" style=\"width: 18rem; height: 14rem; \">
                 </div>
                 <div class=\"col-4\" style=\"border-color: blue\">
                     $descrizione
                 </div>
             </div>
-        </div>";
+        </div>
+        <hr>";
 
     echo $element;
 }
