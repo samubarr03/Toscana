@@ -44,12 +44,12 @@
           <div class="col-lg-6 col-md-10 footer-links" style="text-align: left;">
             <h4>Link Utili</h4>
             <ul>
-              <li><i class="bi bi-laptop"></i> <a href="index.php">Home</a></li>
-              <li><i class="bi bi-binoculars"></i> <a href="tour.php">Tour</a></li>
-              <li><i class="bi bi-person"></i> <a href="login.php">Accedi</a></li>
-              <li><i class="bi bi-person"></i> <?php echo $logged; ?></li>
-              <li><i class="bi bi-shield-shaded"></i> <a href="https://protezionedatipersonali.it/privacy-by-design-e-by-default">Privacy policy</a></li>
-              <li><i class="bi bi-lock"></i> <a href="https://www.articolo9dellacostituzione.it/index.php?page=informativa-sui-cookie">Cookies</a></li>
+              <li><i class="bi bi-laptop"></i> <a href="index.php"> Home</a></li>
+              <li><i class="bi bi-binoculars"></i> <a href="tour.php"> Tour</a></li>
+              <!--<li><i class="bi bi-person"></i> <a href="login.php"> Accedi</a></li>-->
+              <li><i class="bi bi-person"></i><?php echo $logged; ?></li>
+              <li><i class="bi bi-shield-shaded"></i> <a href="https://protezionedatipersonali.it/privacy-by-design-e-by-default"> Privacy policy</a></li>
+              <li><i class="bi bi-lock"></i> <a href="https://www.articolo9dellacostituzione.it/index.php?page=informativa-sui-cookie"> Cookies</a></li>
             </ul>
           </div>
 

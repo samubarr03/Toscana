@@ -69,7 +69,7 @@ function genera($nome,$map,$descrizione){
                     $descrizione
                 </div>
             </div>
-            ";?>
+              
             <video id="preview"></video>
             
             <script type="text/javascript">

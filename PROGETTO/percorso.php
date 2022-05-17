@@ -21,6 +21,29 @@
         <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
+        <?php
+	session_start();
+    include "data.php";
+    require_once ('product.php');
+    
+
+	if(!isset($_SESSION['email'])){
+	    header("location: login.html");
+	}
+
+
+    if(isset($_GET['id'])){
+
+            $get=1;
+            $id=$_GET['id']; 
+            $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
+            
+    }
+    else{ 
+  
+        $sql = "SELECT * FROM Percorso "; 
+        $get=0;
+    } ?>
 </head>
 <style>
     .GoogleMaps {
@@ -102,19 +125,22 @@
     <div class="InfoEQR" style="float:left;">
       <br><center><h2>Lista attrazioni<h2></center>
       <div style="overflow-y: scroll; width:80%; height:50%; margin-left:10%">
-          <H3>Campanile Giotto</h3>
-          <H3>Napoli</h3>
-          <H3>Torre ciao ciao</h3>
-          <H3>testo</h3>
-          <H3>testo</h3>
-          <H3>testo</h3>
-          <H3>testo</h3>
-          <H3>testo</h3>
-          <H3>testo</h3>
-          <H3>testoquery</h3>
-          <H3>testoquery</h3>
-          <H3>poporcodiaz</h3>
-          
+
+        <?php echo $get;  if($get==1){
+          echo $get;
+          $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
+          if(mysqli_num_rows($resultset) > 0){
+            echo $get;  
+              while($row = mysqli_fetch_array($resultset)){
+                  genera($row['id']);
+                  echo $get;
+                }
+              
+    }
+}  
+
+
+     ?>     
         </div><br>
       <div align ="center"><img src="img/download.png"></div>
     </div>
