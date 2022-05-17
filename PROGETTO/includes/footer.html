@@ -1,3 +1,27 @@
+<?php
+ 
+  include "data.php";
+
+
+  $admin=0;
+
+
+  if(!isset($_SESSION['email'])){
+	//
+		$logged = '<a class="nav-link" href="login.html">Accedi </a> ';
+
+	}
+	else{
+		$logged = '<a href="profilo.php">Profilo </a>';
+        if($_SESSION['email']=="admin@gmail.com"){
+            $admin=1;    
+        }
+
+	}
+    
+
+?>
+
 <footer id="footer">
 
     <div class="footer-top">
@@ -23,6 +47,7 @@
               <li><i class="bi bi-laptop"></i> <a href="index.php">Home</a></li>
               <li><i class="bi bi-binoculars"></i> <a href="tour.php">Tour</a></li>
               <li><i class="bi bi-person"></i> <a href="login.php">Accedi</a></li>
+              <li><i class="bi bi-person"></i> <?php echo $logged; ?></li>
               <li><i class="bi bi-shield-shaded"></i> <a href="https://protezionedatipersonali.it/privacy-by-design-e-by-default">Privacy policy</a></li>
               <li><i class="bi bi-lock"></i> <a href="https://www.articolo9dellacostituzione.it/index.php?page=informativa-sui-cookie">Cookies</a></li>
             </ul>
