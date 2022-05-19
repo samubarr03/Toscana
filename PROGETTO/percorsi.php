@@ -13,6 +13,7 @@
         $var=$_GET['id']; 
         
             $sql = " SELECT * FROM PercorsoHaAttrazione WHERE idPercorso;='{$id}'";
+            SELECT * FROM `percorsohaattrazione` ORDER BY `idAttrazione` ASC
 
     }
    
