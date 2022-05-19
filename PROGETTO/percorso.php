@@ -110,13 +110,16 @@
     #map { 
       height: 600px; width:1000px;
       }
+    body {
+      background-image: url("img/hero_toscana.jpg");
+    }
 </style>
 <body>
 
     <div style="margin-top:2%">
     <div class="GoogleMaps" style="float:left;">
     <center><h1>NOME CITTA</h1></center>
-        <div style ="margin-left:10%; margin-right:10%; margin-top:1%">
+        <div style ="margin-left:10%; margin-right:10%; margin-top:1%; opacity: 1000000;">
         <div id="map"></div>
         <script type="text/javascript" src="leaflet.js"></script> 
         </div><BR><div align ="center"><input type="button" class="button" value="Input Button"></div>

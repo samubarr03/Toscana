@@ -1,17 +1,3 @@
-
-
-
-CREATE TABLE Attrazione(
-id int AUTO_INCREMENT PRIMARY KEY,
-nome varchar(255)NOT NULL,
-descrizione varchar(255) NOT NULL,
-img varchar(255),
-
-
-
-);
-
-
 CREATE TABLE CartaDiCredito(
 n_carta char(16) PRIMARY KEY,
 cvv varchar(4) UNIQUE NOT NULL,
@@ -60,20 +46,38 @@ PRIMARY KEY(idUtente, idPercorso)
 );
 
 
+ 
+
+
+ CREATE TABLE Attrazione(
+id int AUTO_INCREMENT PRIMARY KEY,
+nome varchar(255)NOT NULL,
+descrizione varchar(255) NOT NULL,
+posizione varchar(32) NOT NULL,
+img varchar(255)
+);
 CREATE TABLE PercorsoHaAttrazione(
 idPercorso int REFERENCES Percorso(id),
 idAttrazione int REFERENCES Attrazione(id),
 PRIMARY KEY(idPercorso, idAttrazione)
 );
- 
+
+INSERT INTO PercorsoHaAttrazione VALUES (0,1);
+INSERT INTO PercorsoHaAttrazione VALUES (0,2);
+-----------------------
+INSERT INTO PercorsoHaAttrazione VALUES (0,3);
+INSERT INTO PercorsoHaAttrazione VALUES (0,4);
+INSERT INTO Attrazione VALUES (id,'Cattedrale di Santa Maria del Fiore','Duomo del 200 noto per la cupola di tegole rosse, la facciata in marmo colorato e il campanile di Giotto.','43.773333, 11.256261','CattedralediSantaMariadelFiore.jpg');
+INSERT INTO Attrazione VALUES (id,'Basilica di Santa Croce di Firenze','Chiesa francescana neogotica, nota per gli affreschi di Giotto e le tombe di Michelangelo e Galileo.','43.768613, 11.262143','BasilicadiSantaCrocediFirenze.jpg');
+------------------------
 
 
- 
 
+
+INSERT INTO Attrazione VALUES (id,'Campanile di Giotto','Torre gotica in marmo rosso, verde e bianco, con scale che portano alla terrazza affacciata sulla città.','43.772722, 11.255678','Campanile di Giotto.jpg');
+INSERT INTO Attrazione VALUES (id,'Ponte vecchio','Pittoresco ponte ad archi sul fiume, di origine romana, costeggiato da gioiellerie e negozi di souvenir.','43.768027, 11.253169','pontevecchio.jpg');
+INSERT INTO Percorso VALUES (id, 'Percorso Barrago', 'Il percorso si svolge dentro barrago','collagetoscana.jpg' );
 INSERT INTO Percorso VALUES (id, 'Percorso Pisa', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
-INSERT INTO Attrazione VALUES (id, 'Torre di Pisa', 'Viene chiamata Torre Pendente o Torre di Pisa, ma in realtà non è mai servita per la difesa della città; è solo una parte del complesso religioso della Piazza del Duomo e, in particolare ne è il campanile. Svolgeva una funzione attiva nella scansione del tempo, umano e divino, per mezzo delle sue sette campane – tante quante sono le note musicali – la più grande delle quali, fusa nel 1655, pesa ben tre tonnellate e mezzo! È conosciuta in tutto il mondo per la bellezza della sua struttura architettonica, per la singolare pendenza che ne fa un vero miracolo di statica e per il fatto che si trovi nel contesto della celeberrima Piazza dei Miracoli, di cui è sicuramente il gioiello.','torre_di_Pisa.jpg' );
-INSERT INTO Attrazione VALUES (id, 'Piazza dei miracoli', 'La piazza accoglie, su un ampia distesa di prato verde, quattro bianchissimi capolavori di arte monumentale medievale: il celeberrimo Campanile o Torre Pendente, il Camposanto, il Battistero e il Duomo.','zeb89.jpg' );
-INSERT INTO Attrazione VALUES (id, 'Cattedrale di Pisa', 'La basilica ha una pianta a croce latina, caratterizzata da cinque navate, con abside e transetto a tre navate. La navata centrale è composta da colonne monolitiche in granito con capitelli scolpiti di XI-XII secolo. Al di sopra vi sono i matronei, scanditi da trifore che corrono anche lungo il transetto.','zeb89.jpg' );
 
 
 INSERT INTO Utente VALUES (id, 'Admin','Admin', ' 333 333 333', 'admin@gmail.com','e6fe636511f4e52b3d29fe549355fb71e76fa0ec3d394d3dd5b15303dfbf53c0')

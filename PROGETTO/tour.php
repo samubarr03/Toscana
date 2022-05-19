@@ -114,7 +114,7 @@
     </div>
   </div>
   
-    </main><!-- End #main -->
+    </main>
 
   <?php include "includes/footer.php";?>
 

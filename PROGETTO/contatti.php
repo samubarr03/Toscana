@@ -17,21 +17,19 @@
 
   <?php include "includes/header.php";?>
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center" style="background:url(img/hero_toscana.jpg)">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
       <h1>CONTATTI</h1>
       <h2>I migliori percorsi e luoghi da visitare della Toscana</h2>
       <a href="tour.php" class="btn-get-started scrollto">VAI AI TOUR</a>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
     
   <?php include "includes/clienti.html";?>
 
 
-    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
         <div class="row">
@@ -78,9 +76,9 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
   <?php include "includes/footer.php";?>
 

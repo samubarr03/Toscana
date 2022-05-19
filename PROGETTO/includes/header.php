@@ -9,6 +9,7 @@
   if(!isset($_SESSION['email'])){
 	//
 		$logged = '<a class="nav-link" href="login.html">Accedi </a> ';
+    $logout = '';
 
 	}
 	else{
@@ -17,6 +18,7 @@
             $admin=1;    
         }
 
+    $logout = '<a class="nav-link" href="logout.php">Logout </a> ';
 	}
     
 
@@ -37,32 +39,11 @@
             <li><a class="nav-link" href="tour.php">Tour</a></li>
             <li><a class="nav-link" href="team.php">Team</a></li>
             <li><a class="nav-link" href="contatti.php">Contatti</a></li>
-            <!--<li><?php //echo $logged; ?></li>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle"> <?php //echo $logged; ?> </button>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="logout.php">Logout</a>
-                        </div>
-                      </div>-->
-            
-
-              <!-- Example split danger button -->
-            <div class="btn-group">
-              <i class="bi bi-person"></i>
-              <!--<button type="button" class="btn btn-danger"></button>-->
-              <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span class="sr-only"></span>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#"><?php echo $logged; ?></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="logout.php">Logout</a>
-              </div>
-            </div>
-
-
+            <li><?php echo $logged; ?></li>
+            <li><?php echo $logout; ?></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
+            <div></div>
         </nav>
 
       </div>
