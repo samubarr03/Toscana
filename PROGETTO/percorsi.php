@@ -8,17 +8,29 @@
 	if(!isset($_SESSION['email'])){
 	    header("location: login.html");
 	}
+    if($_GET['action']=="AttPercorso"){
+
+        $var=$_GET['id']; 
+        
+            $sql = " SELECT * FROM PercorsoHaAttrazione WHERE idPercorso;='{$id}'";
+
+    }
+   
 
 
     if(isset($_GET['id'])){
 
-            $get=1;
-            $id=$_GET['id']; 
-            $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
             
-    }
+            $id=$_GET['id']; 
+            
+            
+                $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
+            }
+            
+
+    
     else{ 
-  
+
         $sql = "SELECT * FROM Percorso "; 
         $get=0;
     }
@@ -89,25 +101,35 @@
 
   <?php include "includes/header.php";?>
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center" style="background:url(img/hero_toscana.jpg)">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
       <h1>TOUR</h1>
       <h2>I migliori percorsi e luoghi da visitare della Toscana</h2>
       <!--<a href="" class="btn-get-started scrollto">ACCEDI</a>-->
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
     
   <?php include "includes/clienti.html";?>
     
-  </main><!-- End #main -->
+  </main><
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
         <div class="row">
             <div class="col-lg">
             <?php
-            if($get){
+            if($_GET['action']=="AttPercorso"){
+                $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
+                            
+                if(mysqli_num_rows($resultset) > 0){
+                        
+                    while($row = mysqli_fetch_array($resultset)){
+                        component($row['nome'],$row['id']);
+                    }
+                }
+                
+            }
+            if(isset($_GET['id'])){
 
                 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
                
@@ -116,7 +138,7 @@
                     
                     while($row = mysqli_fetch_array($resultset)){
                     
-                        genera($row['nome'],$row['map'],$row['descrizione']);
+                        genera($row['nome'],$row['map'],$row['descrizione'],$row['id']);
                     }
                 }            
 
