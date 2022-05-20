@@ -8,30 +8,33 @@
 	if(!isset($_SESSION['email'])){
 	    header("location: login.html");
 	}
-    if($_GET['action']=="AttPercorso"){
 
-        $var=$_GET['id']; 
-        
-            $sql = " SELECT * FROM PercorsoHaAttrazione WHERE idPercorso;='{$id}'";
-            SELECT * FROM `percorsohaattrazione` ORDER BY `idAttrazione` ASC
+    $percorso=0;
+    $att=0;
+
+    if($_GET['action']=="AttPercorso"){
+        $att=1;
+        $id=$_GET['id'];    
+
+        $sql = "SELECT * FROM attrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";
+       // $sql = "Pippo";
 
     }
    
 
-
-    if(isset($_GET['id'])){
-
-            
-            $id=$_GET['id']; 
-            
-            
-                $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
-            }
+    else if($_GET['action']=="percorso"){
+        $message = "wrong answer";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        $percorso=1;
+        $id=$_GET['id']; 
+        $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
+    }
             
 
     
     else{ 
-
+        $message = "entro else";
+        echo "<script type='text/javascript'>alert('$message');</script>";
         $sql = "SELECT * FROM Percorso "; 
         $get=0;
     }
@@ -114,23 +117,28 @@
     
   <?php include "includes/clienti.html";?>
     
-  </main><
+  </main>
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
         <div class="row">
             <div class="col-lg">
             <?php
-            if($_GET['action']=="AttPercorso"){
-                $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
-                            
+            if($att==1){
+                
+                
+                $resultset = mysqli_query($conn, $sql);	
+
                 if(mysqli_num_rows($resultset) > 0){
-                        
+                    $message = "sono dopo il get";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
                     while($row = mysqli_fetch_array($resultset)){
+                       
+       
                         component($row['nome'],$row['id']);
                     }
                 }
                 
             }
-            if(isset($_GET['id'])){
+            if($percorso==1){
 
                 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
                

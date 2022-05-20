@@ -111,7 +111,6 @@ INSERT INTO Attrazione VALUES(id,'Piazza del Duomo','Il cuore storico e artistic
 --STADIO--
 INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento degli anni 30 progettato da Nervi, con una capienza di circa 50.000 spettatori.','43.780590, 11.282558','fiorentina.jpg');
 INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento degli anni 30 progettato da Nervi, con una capienza di circa 50.000 spettatori.','43.780590, 11.282558','fiorentina.jpg');
-
 INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento degli anni 30 progettato da Nervi, con una capienza di circa 50.000 spettatori.','43.780590, 11.282558','fiorentina.jpg');
 INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento degli anni 30 progettato da Nervi, con una capienza di circa 50.000 spettatori.','43.780590, 11.282558','fiorentina.jpg');
 

@@ -15,7 +15,7 @@ function component($nome,$id){
             <div class=\"row\">
                 <div class=\"col-11\">
                     <div class=\"rettangolo_percorso\">
-                        <a class=\"nome\" href=\"percorsi.php?id=$id\">
+                        <a class=\"nome\" href=\"percorsi.php?action=percorso&id=$id\">
                             <center><div class=\"card-body\">
                                 <h5 class=\"card-title\">$nome</h5> 
                             </div>                       
