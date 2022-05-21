@@ -118,12 +118,8 @@
   <?php include "includes/clienti.html";?>
     
   </main>
-    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
-        <div class="row">
-            <div class="col-lg">
             <?php
             if($att==1){
-                
                 
                 $resultset = mysqli_query($conn, $sql);	
 
@@ -164,10 +160,11 @@
             }
                         
                     ?>
+
             </div>
         </div>
-    </div>
-  <?php include "includes/footer.php";?>
+    </div></div></div></div>
+ <br>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -185,4 +182,5 @@
   <script src="js/bootstrap.min.js"></script>
 
 </body>
+        
 </html>
