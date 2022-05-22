@@ -17,14 +17,13 @@
         $id=$_GET['id'];    
 
         $sql = "SELECT * FROM attrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";
-       // $sql = "Pippo";
+       
 
     }
    
 
     else if($_GET['action']=="percorso"){
-        $message = "wrong answer";
-        echo "<script type='text/javascript'>alert('$message');</script>";
+     
         $percorso=1;
         $id=$_GET['id']; 
         $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
@@ -33,8 +32,7 @@
 
     
     else{ 
-        $message = "entro else";
-        echo "<script type='text/javascript'>alert('$message');</script>";
+     
         $sql = "SELECT * FROM Percorso "; 
         $get=0;
     }
@@ -122,7 +120,7 @@
             if($att==1){
                 
                 $resultset = mysqli_query($conn, $sql);	
-
+                
                 if(mysqli_num_rows($resultset) > 0){
                     $message = "sono dopo il get";
                     echo "<script type='text/javascript'>alert('$message');</script>";
