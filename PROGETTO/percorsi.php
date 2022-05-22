@@ -11,17 +11,24 @@
 
     $percorso=0;
     $att=0;
+    $GenAtt=0;
 
     if($_GET['action']=="AttPercorso"){
         $att=1;
         $id=$_GET['id'];    
 
-        $sql = "SELECT * FROM attrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";
-       
+        $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";
+        //$sql = "SELECT * FROM ClienteAggiungePortata,Portata where ClienteAggiungePortata.num=Portata.id ORDER BY id ASC";
 
     }
    
-
+    else if($_GET['action']=="GenAtt"){
+     
+        $GenAtt=1;
+        $id=$_GET['id']; 
+        $sql = " SELECT * FROM attrazione WHERE id='{$id}'";
+    }
+            
     else if($_GET['action']=="percorso"){
      
         $percorso=1;
@@ -126,17 +133,29 @@
                 $resultset = mysqli_query($conn, $sql);	
                 
                 if(mysqli_num_rows($resultset) > 0){
-                    $message = "sono dopo il get";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
                     while($row = mysqli_fetch_array($resultset)){
                        
        
-                        component($row['nome'],$row['id']);
+                        componentAtt($row['nome'],$row['id']);
                     }
                 }
                 
             }
-            if($percorso==1){
+            else if($GenAtt==1){
+
+                $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
+               
+                if(mysqli_num_rows($resultset) > 0){
+               
+                    
+                    while($row = mysqli_fetch_array($resultset)){
+                    
+                        genera($row['nome'],$row['img'],$row['descrizione'],$row['id']);
+                    }
+                }            
+
+            }  
+            else if($percorso==1){
 
                 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
                
@@ -147,8 +166,13 @@
                     
                         genera($row['nome'],$row['map'],$row['descrizione'],$row['id']);
                     }
-                }            
-
+                }
+                ?>
+                    "<button type=\"submit\" class=\"btn btn-warning my-3\" name=\"rem\" style=\"float: right; @media screen and (max-width: 1200px) {.rettangolo_percorso{width: 60%;} .}\">  
+                        <a href=\"carrello.php?action=CreaPercorso\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
+                    </button>
+                <?php  
+                
             }    
             else{
                     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
