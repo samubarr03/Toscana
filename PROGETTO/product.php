@@ -151,11 +151,12 @@ function genera($nome,$map,$descrizione,$id){
                 <div id=\"map\"></div>
                 <script type=\"text/javascript\" src=\"leaflet.js\"></script> 
                 </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a></div>
-            </div>
+                </div>
             
             <div class=\"InfoEQR\" style=\"float:left;\">
             <br><center><h2>Lista attrazioni<h2></center>
             <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">  
+                <h4>\"com pon entAtt($ row[\'nome\'],$ row[\'id\'])\"</h4>
                 </div><br>
             <div align =\"center\"><img src=\"img/download.png\"></div>
             </div>
@@ -175,6 +176,7 @@ function genera($nome,$map,$descrizione,$id){
                     $descrizione
                 </div>
             </div>
+            
             <a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a>
         </div>
         <hr>";
