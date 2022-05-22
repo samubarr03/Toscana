@@ -12,33 +12,33 @@
     $percorso=0;
     $att=0;
     $GenAtt=0;
+    $AddPercorso=0;
 
-    if($_GET['action']=="AttPercorso"){
+
+    if($_GET['action']=="AttPercorso"){  //mostra attrazioni di un percorso
         $att=1;
         $id=$_GET['id'];    
-
-        $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";
-        //$sql = "SELECT * FROM ClienteAggiungePortata,Portata where ClienteAggiungePortata.num=Portata.id ORDER BY id ASC";
-
+        $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";   
     }
-   
+
     else if($_GET['action']=="GenAtt"){
      
         $GenAtt=1;
         $id=$_GET['id']; 
         $sql = " SELECT * FROM attrazione WHERE id='{$id}'";
     }
+   
+    else if($_GET['action']=="AddPercorso"){ //genera percorso
+        $AddPercorso=1;
+    }
             
-    else if($_GET['action']=="percorso"){
-     
+    else if($_GET['action']=="percorso"){  //mostra percorso
         $percorso=1;
         $id=$_GET['id']; 
         $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
     }
-            
 
-    
-    else{ 
+    else{  //mostra tutti i percorsi
      
         $sql = "SELECT * FROM Percorso "; 
         $get=0;
@@ -156,7 +156,7 @@
 
             }  
             else if($percorso==1){
-
+                
                 $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
                
                 if(mysqli_num_rows($resultset) > 0){
@@ -166,15 +166,22 @@
                     
                         genera($row['nome'],$row['map'],$row['descrizione'],$row['id']);
                     }
+  
                 }
-                ?>
-                    "<button type=\"submit\" class=\"btn btn-warning my-3\" name=\"rem\" style=\"float: right; @media screen and (max-width: 1200px) {.rettangolo_percorso{width: 60%;} .}\">  
-                        <a href=\"carrello.php?action=CreaPercorso\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
-                    </button>
-                <?php  
-                
-            }    
+
+            }  
+            else if($AddPercorso==1){                    
+                    AddPercorso();
+                    $message = "wrong answer";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+               
+                    
+  
+             }
+
+               
             else{
+                
                     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
                             
                     if(mysqli_num_rows($resultset) > 0){
@@ -183,10 +190,17 @@
                             component($row['nome'],$row['id']);
                         }
                     }
-            }
+                    if($_SESSION['email']=="admin@gmail.com")
+                    $element="
+                    <button class=\"dropbtn\"><a href=\"percorsi.php?action=AddPercorso\">Inserisci Portata</a></button>   
+                    ";
+                    echo $element;
+            }       
+
                         
                     ?>
-            </div>
+            </div> 
+            
         </div>
     </div>
   <?php include "includes/footer.php";?>

@@ -123,4 +123,30 @@ function componentAtt($nome,$id){
     echo $element;
 }
 
+function AddPercorso(){
+    $element = 
+        "
+        <hr>
+
+        <div class=\"container\" style=\"border-color: red\">
+            <form method=\"POST\" action=\"UploadPercorso.php\" enctype=\"multipart/form-data\">
+                <div class=\"row\" style=\"border-color: black, width: 100%\">
+                    <h2>⠀ Nome:</h2> <input name=\"nome\" ID=\"abc\" type=\"text\">
+                </div>
+                <div class=\"row\" style=\"border-color: green\">
+                    
+                        <br>
+                        <h2>Scegli immagine </h2> 
+                        <input name=\"img\" type=\"file\" />
+                    
+                    
+                        <h2> descrizione </h2><input name=\"descrizione\" ID=\"abc\" type=\"text\" >
+                        
+                </div>
+            <input ID=\"invia\" type=\"submit\" value=\"Salva\">	
+        </div>
+        <hr>";
+
+    echo $element;
+}
 ?>
