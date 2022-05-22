@@ -171,6 +171,9 @@ function genera($nome,$map,$descrizione,$id){
 }
 
 */
+
+
+$conn->close();
 function genera($nome,$map,$descrizione,$id){
     $element = 
         "
@@ -186,6 +189,19 @@ function genera($nome,$map,$descrizione,$id){
             <div class=\"InfoEQR\" style=\"float:left;\">
             <br><center><h2>Lista attrazioni<h2></center>
             <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">  
+                
+                    $sql = \"SELECT idAttrazione FROM `percorsohaattrazione`;\";
+                    $result = $conn->query($sql);
+                    
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo \"<br> id: \". $row[\"idAttrazione\"]. \"<br>\";
+                        }
+                    } else {
+                        echo \"0 results\";
+                    }
+                
                 </div><br>
             <div align =\"center\"><img src=\"img/download.png\"></div>
             </div>

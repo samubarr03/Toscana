@@ -140,7 +140,8 @@
                
                     
                     while($row = mysqli_fetch_array($resultset)){
-                    
+                        
+                        
                         genera($row['nome'],$row['map'],$row['descrizione'],$row['id']);
                     }
                 }            
@@ -165,7 +166,7 @@
  <br>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+<!--LAVORA DA QUESTO BRANCH, POI CARICHIAMO SU MAIN-->
   
   <!-- Importa JS-->
   <script src="js/purecounter.js"></script>
