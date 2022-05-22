@@ -1,3 +1,69 @@
+<style>
+    .GoogleMaps {
+      margin-left:3%;
+      width:67%;
+      height:900px;
+      background-color:#009970;
+      }
+      .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 400%;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    h1 {
+        display: block;
+        font-size: 190px;
+        color:white;
+    }
+    h2 {
+        display: block;
+        font-size: 75px;
+        color:white;
+    }
+    h3 {
+        display: block;
+        font-size: 60px;
+        color:blue;
+    }
+    .InfoEQR {
+      margin-left:1%;
+      margin-right:1%;
+      width:27%;
+      height:900px;
+      background-color:#dfffde;
+      }
+      /* width */
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #696969; 
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7f7f7f; 
+    }
+    #map { 
+      height: 600px; width:1000px;
+      }
+</style>
 <?php
 
 function component($nome,$id){
@@ -62,7 +128,7 @@ function genera($nome,$map,$descrizione,$id){
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
                 <div id=\"map\"></div>
                 <script type=\"text/javascript\" src=\"leaflet.js\"></script> 
-                </div><BR><div align =\"center\"><input type=\"button\" class=\"button\" value=\"Input Button\"></div>
+                </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a></div>
             </div>
             
             <div class=\"InfoEQR\" style=\"float:left;\">
