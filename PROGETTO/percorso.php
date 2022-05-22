@@ -129,7 +129,7 @@
       <br><center><h2>Lista attrazioni<h2></center>
       <div style="overflow-y: scroll; width:80%; height:50%; margin-left:10%">
 
-        <?php echo $get;  if($get==1){
+        /*<?php echo $get;  if($get==1){
           echo $get;
           $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
           if(mysqli_num_rows($resultset) > 0){
@@ -143,7 +143,7 @@
 }  
 
 
-     ?>     
+     ?>    
         </div><br>
       <div align ="center"><img src="img/download.png"></div>
     </div>
