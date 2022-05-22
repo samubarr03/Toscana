@@ -57,6 +57,24 @@ function genera($nome,$map,$descrizione,$id){
     $element = 
         "
         <hr>
+        <div class=\"GoogleMaps\" style=\"float:left;\">
+            <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
+                <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
+                <div id=\"map\"></div>
+                <script type=\"text/javascript\" src=\"leaflet.js\"></script> 
+                </div><BR><div align =\"center\"><input type=\"button\" class=\"button\" value=\"Input Button\"></div>
+            </div>
+            
+            <div class=\"InfoEQR\" style=\"float:left;\">
+            <br><center><h2>Lista attrazioni<h2></center>
+            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">  
+                </div><br>
+            <div align =\"center\"><img src=\"img/download.png\"></div>
+            </div>
+            <hr>
+        
+        <hr><br><br>
+
         <div class=\"container\" style=\"border-color: red\">
             <div class=\"row\" style=\"border-color: black, width: 100%\">
                 <h1>$nome</h1>
