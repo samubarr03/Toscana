@@ -1,6 +1,12 @@
 
 <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <script type="text/javascript" src="leaflet.js"></script>
+        <title><?php $nome ?></title> <!-- COME FACCIO A METTERE STO TITOLO? -->
 
+        <?php include "includes/css.html"; ?>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
   crossorigin=""/>
@@ -23,14 +29,15 @@
         crossorigin=""/>
         <!-- Make sure you put this AFTER Leaflet's CSS -->
         <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-        crossorigin=""></script>
+            integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+            crossorigin="">
+        </script>
 </head>
 <style>
     .GoogleMaps {
       margin-left:3%;
       width:67%;
-      height:700px;
+      height:900px;
       background-color:#009970;
       }
       .a {
@@ -55,11 +62,7 @@
         font-size: 75px;
         color:white;
     }
-    h3 {
-        display: block;
-        font-size: 60px;
-        color:blue;
-    }
+    
     .InfoEQR {
       margin-left:1%;
       margin-right:1%;
@@ -91,18 +94,36 @@
     #map { 
       height: 600px; width:1000px;
       }
+      .rimuovi {
+        display: inline-block;
+  padding: 10px 20px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 50%;
+}
 </style>
 <?php
 
 function component($nome,$id){
     $element =
-    
+
         "<style>
             .nome_percorso{
                 color: #009970;
             }
             .rettangolo_percorso{
-                background-color: blue;
+                background-color: #4CAF50;
+                width: 50%;
+                margin-left:25%;
+                height: 100%;
+                text-align: center;
+                padding-top:18px;
             }
         </style> 
         <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
@@ -110,21 +131,19 @@ function component($nome,$id){
                 <div class=\"col-11\">
                     <div class=\"rettangolo_percorso\">
                         <a class=\"nome\" href=\"percorsi.php?action=percorso&id=$id\">
-                            <center><div class=\"card-body\">
-                                <h5 class=\"card-title\">$nome</h5> 
-                            </div>                       
+                            <h5>$nome</h5> 
+                             
                         </a>
                     </div>
                 </div>      
                 <div class=\"col-1\">
-                        ";     
+                        ";      
                         if(isset($_SESSION['email'])){
                         if($_SESSION['email']=="admin@gmail.com"){
                             
                             $element=$element."
-                        <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"rem\" style=\"float: right; @media screen and (max-width: 1200px) {.rettangolo_percorso{width: 60%;} .}\">  
-                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
-                        </button>
+                          
+                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">--</a>
                         
                         ";
                         
@@ -262,7 +281,7 @@ function AddPercorso(){ //form crea percorso
         <div class=\"container\" style=\"border-color: red\">
             <form method=\"POST\" action=\"UploadPercorso.php\" enctype=\"multipart/form-data\">
                 <div class=\"row\" style=\"border-color: black, width: 100%\">
-                    <h2>⠀ Nome:</h2> <input name=\"nome\" ID=\"abc\" type=\"text\">
+                    <h2> Nome:</h2> <input name=\"nome\" ID=\"abc\" type=\"text\">
                 </div>
                 <div class=\"row\" style=\"border-color: green\">
                     
