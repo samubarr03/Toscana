@@ -130,9 +130,6 @@
   <?php include "includes/clienti.html";?>
     
   </main>
-    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
-        <div class="row">
-            <div class="col-lg">
             <?php
             if($att==1){
                 
@@ -142,7 +139,6 @@
                 if(mysqli_num_rows($resultset) > 0){
                     while($row = mysqli_fetch_array($resultset)){
                        
-       
                         componentAtt($row['nome'],$row['id']);
                     }
                 }

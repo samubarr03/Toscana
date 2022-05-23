@@ -1,3 +1,91 @@
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+  integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+  crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script type="text/javascript" src="leaflet.js"></script>
+  <title><?php$nome?></title>
+
+  <?php include "includes/css.html"; ?>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin=""/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+</head>
+<style>
+    .GoogleMaps {
+      margin-left:3%;
+      width:67%;
+      height:900px;
+      background-color:#009970;
+      }
+      .a {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 400%;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    h1 {
+        display: block;
+        font-size: 190px;
+        color:white;
+    }
+    h2 {
+        display: block;
+        font-size: 75px;
+        color:white;
+    }
+    h3 {
+        display: block;
+        font-size: 60px;
+        color:blue;
+    }
+    .InfoEQR {
+      margin-left:1%;
+      margin-right:1%;
+      width:27%;
+      height:900px;
+      background-color:#dfffde;
+      }
+      /* width */
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #696969; 
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7f7f7f; 
+    }
+    #map { 
+      height: 600px; width:1000px;
+      }
+</style>
 <?php
 
 function component($nome,$id){
@@ -57,6 +145,25 @@ function genera($nome,$map,$descrizione,$id){
     $element = 
         "
         <hr>
+        <div class=\"GoogleMaps\" style=\"float:left;\">
+            <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
+                <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
+                <div id=\"map\"></div>
+                <script type=\"text/javascript\" src=\"leaflet.js\"></script> 
+                </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a></div>
+                </div>
+            
+            <div class=\"InfoEQR\" style=\"float:left;\">
+            <br><center><h2>Lista attrazioni<h2></center>
+            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">  
+                <h4>\"com pon entAtt($ row[\'nome\'],$ row[\'id\'])\"</h4>
+                </div><br>
+            <div align =\"center\"><img src=\"img/download.png\"></div>
+            </div>
+            <hr>
+        
+        <hr><br><br>
+
         <div class=\"container\" style=\"border-color: red\">
             <div class=\"row\" style=\"border-color: black, width: 100%\">
                 <h1>$nome</h1>
@@ -69,6 +176,7 @@ function genera($nome,$map,$descrizione,$id){
                     $descrizione
                 </div>
             </div>
+            
             <a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a>
         </div>
         <hr>";
