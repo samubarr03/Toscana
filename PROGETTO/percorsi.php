@@ -135,9 +135,10 @@
   <main id="main">
     
   <?php include "includes/clienti.html";?>
-    
+  <br>
   </main>
             <?php
+            
             if($att==1){
                 $resultset = mysqli_query($conn, $sql);	
 
