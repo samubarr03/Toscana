@@ -95,7 +95,7 @@
       background: #7f7f7f; 
     }
     #map { 
-      height: 600px; width:1000px;
+      height: 75%; width:100%;
       }
       .rimuovi {
         display: inline-block;
@@ -109,6 +109,20 @@
   background-color: #4CAF50;
   border: none;
   border-radius: 50%;
+}
+.button2 {
+  position: relative;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
 }
 </style>
 <?php
@@ -178,7 +192,7 @@ function genera($nome,$map,$descrizione,$id){
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
                 <div id=\"map\"></div>
                 <script type=\"text/javascript\" src=\"leaflet.js\"></script> 
-                </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a></div>
+                </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
                 </div>
             
             <div class=\"InfoEQR\" style=\"float:left;\">
