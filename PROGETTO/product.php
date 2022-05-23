@@ -1,4 +1,5 @@
 <head>
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
   crossorigin=""/>
@@ -9,7 +10,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <script type="text/javascript" src="leaflet.js"></script>
-  <title><?php$nome?></title>
+  <title><?php $nome ?></title>
 
   <?php include "includes/css.html"; ?>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
@@ -24,7 +25,7 @@
     .GoogleMaps {
       margin-left:3%;
       width:67%;
-      height:900px;
+      height:700px;
       background-color:#009970;
       }
       .a {
@@ -184,7 +185,7 @@ function genera($nome,$map,$descrizione,$id){
     echo $element;
 }
 
-function componentAtt($nome,$id){
+function componentAtt($nome,$id,$idP){  //genera attrazione
     $element =
     
         "<style>
@@ -213,7 +214,7 @@ function componentAtt($nome,$id){
                             
                             $element=$element."
                         <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"rem\" style=\"float: right; @media screen and (max-width: 1200px) {.rettangolo_percorso{width: 60%;} .}\">  
-                            <a href=\"carrello.php?action=rimuovi&id=$id\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
+                            <a href=\"percorsi.php?action=RimuoviAttrazione&id=$id&idP=$idP\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
                         </button>
                         
                         ";
@@ -231,7 +232,7 @@ function componentAtt($nome,$id){
     echo $element;
 }
 
-function AddPercorso(){
+function AddPercorso(){ //form crea percorso
     $element = 
         "
         <hr>

@@ -132,14 +132,12 @@
   </main>
             <?php
             if($att==1){
-                
-                
                 $resultset = mysqli_query($conn, $sql);	
-                
+
                 if(mysqli_num_rows($resultset) > 0){
                     while($row = mysqli_fetch_array($resultset)){
                        
-                        componentAtt($row['nome'],$row['id']);
+                        componentAtt($row['nome'],$row['id'], $id);
                     }
                 }
                 
