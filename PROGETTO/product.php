@@ -219,20 +219,11 @@ function genera($nome,$map,$descrizione,$id){
         
         <hr><br><br>
 
-        <div class=\"container\" style=\"border-color: red\">
-            <div class=\"row\" style=\"border-color: black, width: 100%\">
-                <h1>$nome</h1>
-            </div>
-            <div class=\"row\" style=\"border-color: green\">
-                <div class=\"col-6\">
-                    <img src=img/$map alt=\"Image1\" class=\"img-fluid card-img-top\" style=\"width: 18rem; height: 14rem; \">
-                </div>
-                <div class=\"col-4\" style=\"border-color: blue\">
-                    $descrizione
+
                 </div>
             </div>
             
-            <a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a>
+            <a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>a</button></a>
         </div>
         <hr>";
 

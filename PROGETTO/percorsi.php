@@ -15,7 +15,6 @@
     $AddPercorso=0;
     $NewAtt=0;
     $AddAttP=0;
-    
 
     if($_GET['action']=="AttPercorso"){  //mostra attrazioni di un percorso
         $att=1;
@@ -30,13 +29,8 @@
         header('Location: percorsi.php'); 
     }
 
-    
-    else if($_GET['action']=="NewAttrazione"){
-        $NewAtt=1;
-
-    }    
-
     else if($_GET['action']=="AddAttrazioneApercorso"){
+ 
         $AddAttP=1;
         $id=$_GET['id']; 
     }
@@ -170,7 +164,7 @@
                     
                     while($row = mysqli_fetch_array($resultset)){
                     
-                        genera($row['nome'],$row['img'],$row['descrizione'],$row['id']);
+                        genera($row['nome'],$row['map'],$row['descrizione'],$row['id']);
                     }
                 }            
 
@@ -192,17 +186,23 @@
             }  
             else if($AddAttP==1){                    
                 AddAttP($id);
-
+                    
+                    
+               
+                    
+  
              }
 
             else if($AddPercorso==1){                    
                 AddPercorso();
+                $message = "wrong answer";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+           
+                
+
             }
 
-            else if($NewAtt==1){                    
-                NewAtt();
-            }
-
+               
             else{
                 
                     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
