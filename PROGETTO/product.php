@@ -315,22 +315,18 @@ function AddPercorso(){ //form crea percorso
 }
 
 function AddAttP($id){ //form crea percorso
-    $sql = "SELECT * FROM attrazione";
+    include "data.php";
+    $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
     
     $element = "
         <form name='form' action='pagin.php' method='GET'>
         Scegli i tuoi frutti preferiti:
-        <select name='Attrazioni' multiple='multiple'>
+        <select name='Attrazioni' >
     ";
     if(mysqli_num_rows($resultset) > 0){
-        while($row = mysqli_fetch_array($resultset)){
-            $nome=$row['nome'];
-            $idA=$row['id'];
-            $elem = "    
-            <option value='$ida'>$nome</option>
-            ";
-            echo $elem;
+        while($row = mysqli_fetch_array($resultset)){            
+            echo "<option value=\"" . $row['id'] . "\">" . $row['nome'] . "</option>";
         }    
 
     }
@@ -342,12 +338,38 @@ function AddAttP($id){ //form crea percorso
     
     </form>
     
+    <a href=\"percorsi.php?action=NewAttrazione\">CreaNuovaAttrazione</a><i class=\"fas fa-shopping-cart\"></i>
 
     ";
 
     echo $element;
 }
 
+function NewAtt(){ //form crea attrazione
+    $element = 
+        "
+        <hr>
 
+        <div class=\"container\" style=\"border-color: red\">
+            <form method=\"POST\" action=\"UploadAtt.php\" enctype=\"multipart/form-data\">
+                <div class=\"row\" style=\"border-color: black, width: 100%\">
+                    <h2> Nome:</h2> <input name=\"nome\" value=\"nome\"  ID=\"abc\" type=\"text\">
+                </div>
+                <div class=\"row\" style=\"border-color: green\">
+                    
+                        <br>
+                        <h2>Scegli immagine </h2> 
+                        <input name=\"img\" type=\"file\" />
+                    
+                    
+                        <h2> descrizione </h2><input name=\"descrizione\" value=\"descrizione\" ID=\"abc\" type=\"text\" >
+                        <h2> descrizione </h2><input name=\"posizione\" value=\"posizione\" ID=\"abc\" type=\"text\" >
+                </div>
+            <input ID=\"invia\" type=\"submit\" value=\"Salva\">	
+        </div>
+        <hr>";
+
+    echo $element;
+}
 
 ?>
