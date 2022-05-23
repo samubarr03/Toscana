@@ -1,3 +1,7 @@
+<?php
+    
+    include "data.php";
+   ?>
 <head>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
@@ -12,7 +16,11 @@
   <script type="text/javascript" src="leaflet.js"></script>
   <title><?php $nome ?></title>
 
-  <?php include "includes/css.html"; ?>
+  <?php
+    include "includes/css.html";
+    
+   ?>
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin=""/>
@@ -258,4 +266,41 @@ function AddPercorso(){ //form crea percorso
 
     echo $element;
 }
+
+function AddAttP($id){ //form crea percorso
+    $sql = "SELECT * FROM attrazione";
+    $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+    
+    $element = "
+        <form name='form' action='pagin.php' method='GET'>
+        Scegli i tuoi frutti preferiti:
+        <select name='Attrazioni' multiple='multiple'>
+    ";
+    if(mysqli_num_rows($resultset) > 0){
+        while($row = mysqli_fetch_array($resultset)){
+            $nome=$row['nome'];
+            $idA=$row['id'];
+            $elem = "    
+            <option value='$ida'>$nome</option>
+            ";
+            echo $elem;
+        }    
+
+    }
+        
+    $element=$element."     
+        </select>
+    
+        <input type='submit' value='Conferma'>
+    
+    </form>
+    
+
+    ";
+
+    echo $element;
+}
+
+
+
 ?>
