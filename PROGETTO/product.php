@@ -1,7 +1,4 @@
-<?php
-    
-    include "data.php";
-   ?>
+
 <head>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
@@ -151,6 +148,10 @@ function component($nome,$id){
 */
 
 function genera($nome,$map,$descrizione,$id){
+    include "data.php";
+    $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
+    $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+
     $element = 
         "
         <hr>
@@ -165,7 +166,19 @@ function genera($nome,$map,$descrizione,$id){
             <div class=\"InfoEQR\" style=\"float:left;\">
             <br><center><h2>Lista attrazioni<h2></center>
             <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">  
-                <h4>\"com pon entAtt($ row[\'nome\'],$ row[\'id\'])\"</h4>
+            ";
+            if(mysqli_num_rows($resultset) > 0){
+                while($row = mysqli_fetch_array($resultset)){
+                    $nome=$row['nome'];
+                    $elem = "    
+                    <h4>$nome</h4>
+                    ";
+                    echo $elem;
+                }    
+        
+            }
+                
+            $element=$element." 
                 </div><br>
             <div align =\"center\"><img src=\"img/download.png\"></div>
             </div>
@@ -194,6 +207,7 @@ function genera($nome,$map,$descrizione,$id){
 }
 
 function componentAtt($nome,$id,$idP){  //genera attrazione
+    
     $element =
     
         "<style>
