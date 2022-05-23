@@ -14,6 +14,7 @@
     $GenAtt=0;
     $AddPercorso=0;
 
+    
 
     if($_GET['action']=="AttPercorso"){  //mostra attrazioni di un percorso
         $att=1;
@@ -21,15 +22,21 @@
         $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";   
     }
 
-    if($_GET['action']=="rimuoviPercorso"){  //rimuove un percorso
+    else if($_GET['action']=="rimuoviPercorso"){  //rimuove un percorso
         $id=$_GET['id'];     		
         $sql = "DELETE FROM Percorso WHERE id=$id";
         $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
         header('Location: percorsi.php'); 
     }
 
+    else if($_GET['action']=="AddAttrazioneApercorso"){
+ 
+        $AddAttP=1;
+        $id=$_GET['id']; 
+    }
+
     else if($_GET['action']=="GenAtt"){
-     
+ 
         $GenAtt=1;
         $id=$_GET['id']; 
         $sql = " SELECT * FROM attrazione WHERE id='{$id}'";
@@ -141,6 +148,11 @@
                         componentAtt($row['nome'],$row['id'], $id);
                     }
                 }
+                if($_SESSION['email']=="admin@gmail.com")
+                $element="
+                <button class=\"dropbtn\"><a href=\"percorsi.php?action=AddAttrazioneApercorso&id=$id\">Inserisci Attrazione al percorso</a></button>   
+                ";
+                echo $element;    
                 
             }
             else if($GenAtt==1){
@@ -171,15 +183,24 @@
   
                 }
 
-            }
-            else if($AddPercorso==1){                    
-                    AddPercorso();
-                    $message = "wrong answer";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
+            }  
+            else if($AddAttP==1){                    
+                AddAttP($id);
+                    
+                    
                
                     
   
              }
+
+            else if($AddPercorso==1){                    
+                AddPercorso();
+                $message = "wrong answer";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+           
+                
+
+            }
 
                
             else{

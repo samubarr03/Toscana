@@ -1,3 +1,7 @@
+<?php
+    
+    include "data.php";
+   ?>
 <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -6,6 +10,24 @@
 
         <?php include "includes/css.html"; ?>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+  integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+  crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script type="text/javascript" src="leaflet.js"></script>
+  <title><?php $nome ?></title>
+
+  <?php
+    include "includes/css.html";
+    
+   ?>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin=""/>
         <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -245,7 +267,7 @@ function AddPercorso(){ //form crea percorso
         <div class=\"container\" style=\"border-color: red\">
             <form method=\"POST\" action=\"UploadPercorso.php\" enctype=\"multipart/form-data\">
                 <div class=\"row\" style=\"border-color: black, width: 100%\">
-                    <h2>⠀ Nome:</h2> <input name=\"nome\" ID=\"abc\" type=\"text\">
+                    <h2> Nome:</h2> <input name=\"nome\" ID=\"abc\" type=\"text\">
                 </div>
                 <div class=\"row\" style=\"border-color: green\">
                     
@@ -263,4 +285,41 @@ function AddPercorso(){ //form crea percorso
 
     echo $element;
 }
+
+function AddAttP($id){ //form crea percorso
+    $sql = "SELECT * FROM attrazione";
+    $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+    
+    $element = "
+        <form name='form' action='pagin.php' method='GET'>
+        Scegli i tuoi frutti preferiti:
+        <select name='Attrazioni' multiple='multiple'>
+    ";
+    if(mysqli_num_rows($resultset) > 0){
+        while($row = mysqli_fetch_array($resultset)){
+            $nome=$row['nome'];
+            $idA=$row['id'];
+            $elem = "    
+            <option value='$ida'>$nome</option>
+            ";
+            echo $elem;
+        }    
+
+    }
+        
+    $element=$element."     
+        </select>
+    
+        <input type='submit' value='Conferma'>
+    
+    </form>
+    
+
+    ";
+
+    echo $element;
+}
+
+
+
 ?>
