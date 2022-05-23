@@ -198,13 +198,13 @@ function genera($nome,$map,$descrizione,$id){
             
             <div class=\"InfoEQR\" style=\"float:left;\">
             <br><center><h2>Lista attrazioni<h2></center>
-            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">  
+            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
             ";
             if(mysqli_num_rows($resultset) > 0){
                 while($row = mysqli_fetch_array($resultset)){
                     $nome=$row['nome'];
                     $elem = "    
-                    <h4>$nome</h4>
+                    <h3>$nome</h3>
                     ";
                     echo $elem;
                 }    

@@ -1,5 +1,4 @@
-var map = L.map('map').setView([43.668662, 10.807697], 10); // latitudine = 43.4586541 ; longitudine = 11.1389204
-
+<script>
 
 
 
@@ -67,12 +66,7 @@ var map = L.map('map').setView([43.668662, 10.807697], 10); // latitudine = 43.4
    // L.marker([43.768040, 11.253175], {icon: Viola}).bindPopup("Ponte vecchio").addTo(map);
    // L.marker([43.7720606, 11.2550904], {icon: Ciano}).bindPopup("I am an orange leaf.").addTo(map);
    // L.marker([43.7730606, 11.2560904], {icon: Rosso}).bindPopup("I am an orange leaf.").addTo(map);
-   var circle = L.circle([43.768040, 11.253175], {
-            color: 'red',
-            fillColor: '#f03',
-            fillOpacity: 0.5,
-            radius: 40
-        }).addTo(map);
+  
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -87,4 +81,18 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     ponte_vecchio= L.marker([43.768040, 11.253175], {icon: Ciano}).bindPopup("Ponte vecchio").addTo(map); // 43.458654 ; 11.253158
     terrazza_mascagni= L.marker([43.534702, 10.298856], {icon: Viola}).bindPopup("Ponte vecchio").addTo(map);
 
+    L.polyline([
+        [44.044814, 10.018769],
+        [44.094537, 10.069540],
+        [44.120679, 10.021561],
+        [44.094852, 9.993441],
+        [44.207722, 9.902912],
+        [44.187427, 9.855210],
+        [44.224676, 9.874053],
+        [44.368371, 9.689057],
+        [44.475363, 9.901808],
+        [44.462984, 9.967636],
+        [44.274791, 10.241617],
+      ],{color:'red'}).addTo(map);
     
+</script>
