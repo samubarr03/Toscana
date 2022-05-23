@@ -21,6 +21,13 @@
         $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";   
     }
 
+    if($_GET['action']=="rimuoviPercorso"){  //rimuove un percorso
+        $id=$_GET['id'];     		
+        $sql = "DELETE FROM Percorso WHERE id=$id";
+        $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
+        header('Location: percorsi.php'); 
+    }
+
     else if($_GET['action']=="GenAtt"){
      
         $GenAtt=1;
@@ -192,7 +199,7 @@
                     }
                     if($_SESSION['email']=="admin@gmail.com")
                     $element="
-                    <button class=\"dropbtn\"><a href=\"percorsi.php?action=AddPercorso\">Inserisci Portata</a></button>   
+                    <button class=\"dropbtn\"><a href=\"percorsi.php?action=AddPercorso\">Inserisci percorso</a></button>   
                     ";
                     echo $element;
             }       

@@ -29,7 +29,7 @@ function component($nome,$id){
                             
                             $element=$element."
                         <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"rem\" style=\"float: right; @media screen and (max-width: 1200px) {.rettangolo_percorso{width: 60%;} .}\">  
-                            <a href=\"carrello.php?action=rimuovi&id=$id\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
+                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
                         </button>
                         
                         ";
