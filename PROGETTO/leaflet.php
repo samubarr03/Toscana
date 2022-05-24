@@ -3,13 +3,7 @@ include "data.php";
 
 ?>
 <script>
-
-
-
-
-//    var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-
+var map = L.map('map').setView([43.45, 11.13], 8); // latitudine = 43.4586541 ; longitudine = 11.1389204
    // STYLE NON ANCORA MESSO-->    mapbox://styles/notepadmerda/cl342x7zn005415p215vvr20e
    
     var Bianco = L.icon({
