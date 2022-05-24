@@ -232,22 +232,13 @@ function genera($nome,$map,$descrizione,$id){
                 </div>
             </div>
             
-<<<<<<< Updated upstream
-            <a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a>
-=======
             <a href=\"index.php?action=AttPercorso&id=$id\"><button>a</button></a>
->>>>>>> Stashed changes
         </div>
         <hr>";
 
     echo $element;
 }
-<<<<<<< Updated upstream
-
-function componentAtt($nome,$id,$idP){  //genera attrazione
-=======
 function componentAtt($nome,$id,$map,$idP){  //genera attrazione
->>>>>>> Stashed changes
     
     $element =
     
