@@ -200,17 +200,9 @@ function genera($nome,$map,$descrizione,$id){
             <br><center><h2>Lista attrazioni<h2></center>
             <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
             ";
-            if(mysqli_num_rows($resultset) > 0){
-                while($row = mysqli_fetch_array($resultset)){
-                    $nome=$row['nome'];
-                    $elem = "    
-                    <h3>$nome</h3>
-                    ";
-                    echo $elem;
-                }    
-        
+            while($row = mysqli_fetch_array($resultset)){            
+                    echo "<option value=\"" . $row['id'] . "\">" . $row['nome'] . "</option>";
             }
-                
             $element=$element." 
                 </div><br>
             <div align =\"center\"><img src=\"img/download.png\"></div>
@@ -228,8 +220,8 @@ function genera($nome,$map,$descrizione,$id){
         <hr>";
 
     echo $element;
-}
 
+}
 function componentAtt($nome,$id,$idP){  //genera attrazione
     
     $element =
