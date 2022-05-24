@@ -96,31 +96,31 @@
       }
       .rimuovi {
         display: inline-block;
-  padding: 10px 20px;
-  font-size: 30px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 50%;
-}
-.button2 {
-  position: relative;
-  background-color: #4CAF50;
-  border: none;
-  font-size: 28px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
+    padding: 10px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50%;
+    }
+    .button2 {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    }
 </style>
 <?php
 
@@ -129,7 +129,7 @@ function component($nome,$id){
 
         "<style>
             .nome_percorso{
-                color: #009970;
+                color: white;
             }
             .rettangolo_percorso{
                 background-color: #4CAF50;
@@ -150,7 +150,7 @@ function component($nome,$id){
                         </a>
                     </div>
                 </div>      
-                <div class=\"col-1\">
+                <div class=\"col-1\"> 
                         ";      
                         if(isset($_SESSION['email'])){
                         if($_SESSION['email']=="admin@gmail.com"){
@@ -232,23 +232,34 @@ function genera($nome,$map,$descrizione,$id){
                 </div>
             </div>
             
+<<<<<<< Updated upstream
             <a href=\"percorsi.php?action=AttPercorso&id=$id\"><button>Visualizza Attrazioni</button></a>
+=======
+            <a href=\"index.php?action=AttPercorso&id=$id\"><button>a</button></a>
+>>>>>>> Stashed changes
         </div>
         <hr>";
 
     echo $element;
 }
+<<<<<<< Updated upstream
 
 function componentAtt($nome,$id,$idP){  //genera attrazione
+=======
+function componentAtt($nome,$id,$map,$idP){  //genera attrazione
+>>>>>>> Stashed changes
     
     $element =
     
         "<style>
             .nome_percorso{
-                color: #009970;
+                color: #blue;
             }
             .rettangolo_percorso{
-                background-color: blue;
+                background-color: lightblue;
+                width:50%;
+                margin-left:25%;
+                margin-right:25%;
             }
         </style> 
         <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
@@ -257,6 +268,7 @@ function componentAtt($nome,$id,$idP){  //genera attrazione
                     <div class=\"rettangolo_percorso\">
                         <a class=\"nome\" href=\"percorsi.php?action=GenAtt&id=$id\">
                             <center><div class=\"card-body\">
+                            <img src=\"./img/db/$map\"  alt=\"$map\" width=\"400\" height=\"400\">
                                 <h5 class=\"card-title\">$nome</h5> 
                             </div>                       
                         </a>
