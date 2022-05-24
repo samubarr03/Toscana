@@ -134,7 +134,6 @@
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
       <h1>TOUR</h1>
       <h2>I migliori percorsi e luoghi da visitare della Toscana</h2>
-      <!--<a href="" class="btn-get-started scrollto">ACCEDI</a>-->
     </div>
   </section>
 

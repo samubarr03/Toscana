@@ -1,3 +1,7 @@
+<?php
+include "data.php";
+
+?>
 <script>
 
 

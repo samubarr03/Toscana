@@ -41,7 +41,8 @@
 				  </div>
 				  <div class="row">
 				  </div>
-				  <div class="signup-link"> <a href="registrati.html">Accedi</a></div>
+				  <center>
+				  <div class="signup-link"> <a href="accedi.html">Accedi</a></div>
 				  <div class="signup-link">Non ti si ancora registato? <a href="registrati.html">Registrati</a></div>
 				  <div class="signup-link"> <a href="index.php">Torna alla home</a></div>
 				</form>
