@@ -103,7 +103,7 @@
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: green;
     border: none;
     border-radius: 50%;
     }
@@ -132,12 +132,13 @@ function component($nome,$id){
                 color: white;
             }
             .rettangolo_percorso{
-                background-color: #4CAF50;
+                background-color: green;
                 width: 50%;
                 margin-left:25%;
                 height: 100%;
                 text-align: center;
                 padding-top:18px;
+                color: white
             }
         </style> 
         <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
@@ -145,7 +146,7 @@ function component($nome,$id){
                 <div class=\"col-11\">
                     <div class=\"rettangolo_percorso\">
                         <a class=\"nome\" href=\"percorsi.php?action=percorso&id=$id\">
-                            <h5>$nome</h5> 
+                            <h5 style=\"color:white\">$nome</h5> 
                              
                         </a>
                     </div>
@@ -157,7 +158,7 @@ function component($nome,$id){
                             
                             $element=$element."
                           
-                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">--</a>
+                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">-</a>
                         
                         ";
                         
@@ -221,18 +222,9 @@ function genera($nome,$map,$descrizione,$id){
 
         <div class=\"container\" style=\"border-color: red\">
             <div class=\"row\" style=\"border-color: black, width: 100%\">
-                <h1>$nome</h1>
-            </div>
-            <div class=\"row\" style=\"border-color: green\">
-                <div class=\"col-6\">
-                    <img src=img/$map alt=\"Image1\" class=\"img-fluid card-img-top\" style=\"width: 18rem; height: 14rem; \">
-                </div>
-                <div class=\"col-4\" style=\"border-color: blue\">
-                    $descrizione
-                </div>
-            </div>
+
             
-            <a href=\"index.php?action=AttPercorso&id=$id\"><button>a</button></a>
+           
         </div>
         <hr>";
 

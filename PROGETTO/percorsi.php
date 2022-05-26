@@ -2,11 +2,11 @@
 <?php
 	session_start();
     include "data.php";
-    require_once ('product.php');
+    require "product.php";
     
 
 	if(!isset($_SESSION['email'])){
-	    header("location: login.html");
+	    header("location:login.html");
 	}
 
     $percorso=0;
@@ -16,7 +16,7 @@
     $NewAtt=0;
     $AddAttP=0;
     
-    if(!isset($_GET['action'])){
+    if(isset($_GET['action'])){
         if($_GET['action']=="AttPercorso"){  //mostra attrazioni di un percorso
             $att=1;
             $id=$_GET['id'];    
@@ -78,7 +78,7 @@
 
     </head>
     <style>
-        .card {
+        /*.card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         max-width: 400px;
         margin: auto;
@@ -125,6 +125,18 @@
         color: #009970;
         font-size: 200%;
         font-weight: 500;
+        }*/
+     
+        .inserisciAttrazioneButton{
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
         }
     </style>
     <body>
@@ -215,7 +227,8 @@
                     }
                     if($_SESSION['email']=="admin@gmail.com")
                     $element="
-                    <button class=\"dropbtn\"><a href=\"percorsi.php?action=AddPercorso\">Inserisci percorso</a></button>   
+                    <center>
+                    <button class=\"inserisciAttrazioneButton\"><a href=\"percorsi.php?action=AddPercorso\">Inserisci percorso</a></button><br>
                     ";
                     echo $element;
             }       
