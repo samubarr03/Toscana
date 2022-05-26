@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
   crossorigin=""/>
-<!-- Make sure you put this AFTER Leaflet's CSS -->
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
   crossorigin=""></script>
@@ -182,7 +182,7 @@ function component($nome,$id){
 
 function genera($nome,$map,$descrizione,$id){
     include "data.php";
-    $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
+    $sql = "SELECT nome FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 
     $element = 
@@ -196,24 +196,25 @@ function genera($nome,$map,$descrizione,$id){
                 </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
                 </div>
             
-            <div class=\"InfoEQR\" style=\"float:left;\">
-            <br><center><h2>Lista attrazioni<h2></center>
-            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
+                <div class=\"InfoEQR\" style=\"float:left;\">
+                <br><center><h2>Descrizione<h2></center>
             ";
+
             if(mysqli_num_rows($resultset) > 0){
                 while($row = mysqli_fetch_array($resultset)){
                     $nome=$row['nome'];
                     $elem = "    
-                    <h3>$nome</h3>
+                    <h1>$nome</h1>
                     ";
                     echo $elem;
                 }    
         
             }
-                
             $element=$element." 
+            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
+            </div><BR><div align =\"center\"><a href=\"scanner.php\"; class=\"button2\">Scannerizza Qr code</a></div>
                 </div><br>
-            <div align =\"center\"><img src=\"img/download.png\"></div>
+            
             </div>
             <hr>
         
@@ -229,42 +230,43 @@ function genera($nome,$map,$descrizione,$id){
 
     echo $element;
 }
-function componentAtt($nome,$id,$map,$idP){  //genera attrazione
-    
+
+
+function componentAtt($nome,$id){
     $element =
-    
+
         "<style>
             .nome_percorso{
-                color: #blue;
+                color: white;
             }
             .rettangolo_percorso{
-                background-color: lightblue;
-                width:50%;
+                background-color: green;
+                width: 50%;
                 margin-left:25%;
-                margin-right:25%;
+                height: 100%;
+                text-align: center;
+                padding-top:18px;
+                color: white
             }
         </style> 
         <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
             <div class=\"row\">
                 <div class=\"col-11\">
                     <div class=\"rettangolo_percorso\">
-                        <a class=\"nome\" href=\"percorsi.php?action=GenAtt&id=$id\">
-                            <center><div class=\"card-body\">
-                            <img src=\"./img/db/$map\"  alt=\"$map\" width=\"400\" height=\"400\">
-                                <h5 class=\"card-title\">$nome</h5> 
-                            </div>                       
+                    <a class=\"nome\" href=\"percorsi.php?action=GenAtt&id=$id\">
+                            <h5 style=\"color:white\">$nome</h5> 
+                             
                         </a>
                     </div>
                 </div>      
-                <div class=\"col-1\">
-                        ";     
+                <div class=\"col-1\"> 
+                        ";      
                         if(isset($_SESSION['email'])){
                         if($_SESSION['email']=="admin@gmail.com"){
                             
                             $element=$element."
-                        <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"rem\" style=\"float: right; @media screen and (max-width: 1200px) {.rettangolo_percorso{width: 60%;} .}\">  
-                            <a href=\"percorsi.php?action=RimuoviAttrazione&id=$id&idP=$idP\">Rimuovi</a><i class=\"fas fa-shopping-cart\"></i>
-                        </button>
+                          
+                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">-</a>
                         
                         ";
                         
@@ -280,6 +282,7 @@ function componentAtt($nome,$id,$map,$idP){  //genera attrazione
     ";
     echo $element;
 }
+
 
 function AddPercorso(){ //form crea percorso
     $element = 
@@ -308,7 +311,7 @@ function AddPercorso(){ //form crea percorso
     echo $element;
 }
 
-function AddAttP($id){ //form crea percorso
+function AddAttP($id){ //form collega attrazione a percorso
     include "data.php";
     $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
@@ -360,6 +363,42 @@ function NewAtt(){ //form crea attrazione
                         <h2> descrizione </h2><input name=\"posizione\" value=\"posizione\" ID=\"abc\" type=\"text\" >
                 </div>
             <input ID=\"invia\" type=\"submit\" value=\"Salva\">	
+        </div>
+        <hr>";
+
+    echo $element;
+}
+
+
+function generaAtt($nome,$map,$descrizione,$id){
+    $element = 
+        "
+        <hr>
+        <div class=\"GoogleMaps\" style=\"float:left;\">
+            <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
+                <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
+                <div id=\"map\"><img src=\"img/$map\" ></div>
+                
+                </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">indietro</a></div>
+                </div>
+            
+            <div class=\"InfoEQR\" style=\"float:left;\">
+            <br><center><h2>Descrizione<h2></center>
+            <h1> $descrizione </h1>
+            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
+
+                </div><br>
+            
+            </div>
+            <hr>
+        
+        <hr><br><br>
+
+        <div class=\"container\" style=\"border-color: red\">
+            <div class=\"row\" style=\"border-color: black, width: 100%\">
+
+            
+           
         </div>
         <hr>";
 
