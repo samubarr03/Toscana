@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 	if(!isset($_SESSION['email'])){
@@ -38,9 +39,9 @@ session_start();
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
       <h1>Profilo</h1>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
-  <main id="main"><!-- Inizio #main -->
+  <main id="main">
 
 <div class="container">
     <div class="main-body">
@@ -57,7 +58,7 @@ session_start();
                       <h4><?php echo $row['nome'] . " " . $row['cognome'];?></h4><br>
                       <div class="row">
                         <div class="col-sm-12">
-                          <a class="btn btn-info " target="__blank" href="">Modifica</a>
+                          <button type="button" style="background-color: #green" href="logout.php">Logout</button>
                         </div>
                       </div>
                     </div>
@@ -118,44 +119,11 @@ session_start();
 
         </div>
     </div>
-    </main><!-- Fine #main -->
+    </main>
 
-<!--
-<div class="profilo">
-    <div class="titolo">
-      <div class="container">
-			  <div class="wrapper">
-				  <div class="title"><span>Utente</span></div>
-				    <div class="row">
-				      <i class="fas fa-user"></i>
-					    <h2>⠀Nome:</h2><div class="infoscritte"><input name="nome" ID="abc" type="text" value=<?php echo $row['nome']; ?>>
-				    </div>
-				    <div class="row">
-					  <i class="fas fa-lock"></i>
-					  <h2>⠀Cognome:</h2><div class="infoscritte"><input name="cognome" ID="abc" type="text" value=<?php echo $row['cognome']; ?>>
-            </div>
-            <div class="row">
-					    <i class="fas fa-user"></i>
-					    <h2>⠀Email:</h2><div class="infoscritte"><input name="email" ID="abc" type="text" value=<?php echo $row['email']; ?> readonly >
-				    </div>
-            <div class="row">
-					    <i class="fas fa-user"></i>
-				    	<h2>⠀Telefono:</h2><div class="infoscritte"><input name="telefono" ID="abc" type="text" value=<?php echo $row['tel']; ?>><br>
-            </div>
-            <a href="logout.php">Logout</a>
-				    <div class="pass"><a href="#">Forgot password?</a></div>
-				    <div class="row button">
-					    <input type="submit" value="Login">
-				    </div>
-				    <div class="signup-link">Non ti si ancora registato? <a href="registrati.html">Registrati</a></div>
-				    <div class="signup-link"> <a href="index.php">Torna alla home</a></div>
-			    </div>
-			  </div>
-      </div> 
-    </div>
-      </div>  -->
+    <br><br>
 
-  <?php include "includes/footer.html";?>
+  <?php include "includes/footer.php";?>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -169,6 +137,8 @@ session_start();
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/validate.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
