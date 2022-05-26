@@ -6,7 +6,7 @@
     
 
 	if(!isset($_SESSION['email'])){
-	    header("location:login.html");
+	    header("location: login.html");
 	}
 
     $percorso=0;
@@ -16,6 +16,9 @@
     $NewAtt=0;
     $AddAttP=0;
     
+    $message = $_SESSION['email'];
+    echo "<script type='text/javascript'>alert('$message');</script>";
+
     if(isset($_GET['action'])){
         if($_GET['action']=="AttPercorso"){  //mostra attrazioni di un percorso
             $att=1;
