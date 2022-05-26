@@ -151,7 +151,7 @@
                 if(mysqli_num_rows($resultset) > 0){
                     while($row = mysqli_fetch_array($resultset)){
                        
-                        componentAtt($row['nome'],$row['id'], $id);
+                        componentAtt($row['nome'],$row['id'],$row['map'], $id);
                     }
                 }
                 if($_SESSION['email']=="admin@gmail.com")
