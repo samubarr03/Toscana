@@ -16,47 +16,48 @@
     $NewAtt=0;
     $AddAttP=0;
     
+    if(!isset($_GET['action'])){
+        if($_GET['action']=="AttPercorso"){  //mostra attrazioni di un percorso
+            $att=1;
+            $id=$_GET['id'];    
+            $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";   
+        }
 
-    if($_GET['action']=="AttPercorso"){  //mostra attrazioni di un percorso
-        $att=1;
-        $id=$_GET['id'];    
-        $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";   
-    }
+        else if($_GET['action']=="rimuoviPercorso"){  //rimuove un percorso
+            $id=$_GET['id'];     		
+            $sql = "DELETE FROM Percorso WHERE id=$id";
+            $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
+            header('Location: percorsi.php'); 
+        }
 
-    else if($_GET['action']=="rimuoviPercorso"){  //rimuove un percorso
-        $id=$_GET['id'];     		
-        $sql = "DELETE FROM Percorso WHERE id=$id";
-        $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));	
-        header('Location: percorsi.php'); 
-    }
+        
+        else if($_GET['action']=="NewAttrazione"){
+            $NewAtt=1;
 
+        }    
+
+        else if($_GET['action']=="AddAttrazioneApercorso"){
+            $AddAttP=1;
+            $id=$_GET['id']; 
+        }
+
+        else if($_GET['action']=="GenAtt"){
     
-    else if($_GET['action']=="NewAttrazione"){
-        $NewAtt=1;
-
+            $GenAtt=1;
+            $id=$_GET['id']; 
+            $sql = " SELECT * FROM attrazione WHERE id='{$id}'";
+        }
+    
+        else if($_GET['action']=="AddPercorso"){ //genera percorso
+            $AddPercorso=1;
+        }
+                
+        else if($_GET['action']=="percorso"){  //mostra percorso
+            $percorso=1;
+            $id=$_GET['id']; 
+            $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
+        }
     }    
-
-    else if($_GET['action']=="AddAttrazioneApercorso"){
-        $AddAttP=1;
-        $id=$_GET['id']; 
-    }
-
-    else if($_GET['action']=="GenAtt"){
- 
-        $GenAtt=1;
-        $id=$_GET['id']; 
-        $sql = " SELECT * FROM attrazione WHERE id='{$id}'";
-    }
-   
-    else if($_GET['action']=="AddPercorso"){ //genera percorso
-        $AddPercorso=1;
-    }
-            
-    else if($_GET['action']=="percorso"){  //mostra percorso
-        $percorso=1;
-        $id=$_GET['id']; 
-        $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
-    }
 
     else{  //mostra tutti i percorsi
      
