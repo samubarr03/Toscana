@@ -71,9 +71,9 @@ INSERT INTO PercorsoHaAttrazione VALUES (0,4);
 
 
 INSERT INTO Attrazione VALUES (id,'Cattedrale di Santa Maria del Fiore','Duomo del 200 noto per la cupola di tegole rosse, la facciata in marmo colorato e il campanile di Giotto.','43.773333, 11.256261','CattedralediSantaMariadelFiore.jpg');
-INSERT INTO Attrazione VALUES (id,'Basilica di Santa Croce di Firenze','Chiesa francescana neogotica, nota per gli affreschi di Giotto e le tombe di Michelangelo e Galileo.','43.768613, 11.262143','BasilicadiSantaCrocediFirenze.jpg');
-INSERT INTO Attrazione VALUES (id,'Campanile di Giotto','Torre gotica in marmo rosso, verde e bianco, con scale che portano alla terrazza affacciata sulla città.','43.772722, 11.255678','Campanile di Giotto.jpg');
-INSERT INTO Attrazione VALUES (id,'Ponte vecchio','Pittoresco ponte ad archi sul fiume, di origine romana, costeggiato da gioiellerie e negozi di souvenir.','43.768027, 11.253169','pontevecchio.jpg');
+INSERT INTO Attrazione VALUES (id,'Basilica di Santa Croce di Firenze','Chiesa francescana neogotica, nota per gli affreschi di Giotto e le tombe di Michelangelo e Galileo.','43.768613, 11.262143','santa-croce-firenze.jpg');
+INSERT INTO Attrazione VALUES (id,'Campanile di Giotto','Torre gotica in marmo rosso, verde e bianco, con scale che portano alla terrazza affacciata sulla città.','43.772722, 11.255678','campanileGiotto.jpg');
+INSERT INTO Attrazione VALUES (id,'Ponte vecchio','Pittoresco ponte ad archi sul fiume, di origine romana, costeggiato da gioiellerie e negozi di souvenir.','43.768027, 11.253169','PonteVecchio.jpg');
 INSERT INTO Attrazione VALUES (id,'Palazzo Pitti','Gallerie in palazzo reale rinascimentale, sedi di vaste collezioni artistiche di maestri italiani ed europei.','43.765302, 11.249910','palazzopitti.jpg');
 INSERT INTO Attrazione VALUES (id,'Galleria degli Uffizi','Edificio del 500 con una vasta collezione di dipinti e capolavori dell"arte dei Primitivi e del Rinascimento.','43.767778, 11.255314','pontevecchio.jpg');
 
@@ -85,7 +85,7 @@ INSERT INTO Attrazione VALUES (id,'Piazza dei Miracoli','Grande distesa erbosa c
 INSERT INTO Attrazione VALUES (id,'Cattedrale di Pisa','Imponente cattedrale in marmo bicolore famosa per le porte in bronzo romaniche e il pulpito scolpito del 1300.','43.723293, 10.395036','CattedralediPisa.jpg');
 
 INSERT INTO Attrazione VALUES(id,'Piazza del Campo','Piazza medievale lastricata in mattoni, circondata da eleganti edifici e famosa per ospitare il Palio.','43.318272, 11.331799','piazzadelcampo.jpg');
-INSERT INTO Attrazione VALUES(id,'Duomo di Siena','Edificio del XIII secolo noto per la sua facciata e le sue celebri fasce di marmo bianche e nere.','43.317611, 11.328730','duomodisiena.jpg');
+INSERT INTO Attrazione VA                            LUES(id,'Duomo di Siena','Edificio del XIII secolo noto per la sua facciata e le sue celebri fasce di marmo bianche e nere.','43.317611, 11.328730','duomodisiena.jpg');
 
 INSERT INTO Attrazione VALUES(id,'Terrazza Mascagni','Elegante terrazza sul mare con gazebo e panchine, più vista panoramica sul mare e sul tramonto.','43.534771, 10.298903','terrazzamascagni.jpg');
 INSERT INTO Attrazione VALUES(id,'Acquario Livorno','Specie marine del Mediterraneo e non solo, tra cui squali pinna nera e coralli.','43.535429, 10.299466','acquariolivorno.jpg');
