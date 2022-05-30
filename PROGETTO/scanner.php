@@ -12,7 +12,9 @@
       });
 
       scanner.addListener('scan', function (content) {
-        console.log(content);
+        console.log(content); //stampa
+        window.location.href=console.log(content);
+        
       });
 
       Instascan.Camera.getCameras().then(function (cameras) {

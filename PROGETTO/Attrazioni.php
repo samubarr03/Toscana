@@ -7,7 +7,7 @@
 	if(!isset($_SESSION['email'])){
 	    header("location: login.html");
 	}
-    message = $_SESSION['email'];
+    $message = $_SESSION['email'];
     echo "<script type='text/javascript'>alert('$message');</script>";
 
     $percorso=0;
