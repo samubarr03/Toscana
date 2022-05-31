@@ -52,7 +52,7 @@
             $id=$_GET['id']; 
             $sql = " SELECT * FROM attrazione WHERE id='{$id}'";
         }
-    
+        
         else if($_GET['action']=="AddPercorso"){ //genera percorso
             $AddPercorso=1;
         }
@@ -184,7 +184,7 @@
                 if(mysqli_num_rows($resultset) > 0){                  
                     while($row = mysqli_fetch_array($resultset)){
                     
-                        generaAtt($row['nome'],$row['img'],$row['descrizione'],$row['id']);
+                        generaAtt($row['nome'],$row['map'],$row['descrizione'],$row['id']);
                     }
                 }            
 

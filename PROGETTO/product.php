@@ -56,10 +56,24 @@
         font-size: 190px;
         color:white;
     }
+
+    h5 {
+        font-size: 2.25rem;
+        color:green;
+    }
     h2 {
         display: block;
         font-size: 75px;
         color:white;
+    }
+    p {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 2.25rem;
+        color: green;
     }
     
     .InfoEQR {
@@ -377,14 +391,14 @@ function generaAtt($nome,$map,$descrizione,$id){
         <div class=\"GoogleMaps\" style=\"float:left;\">
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
-                <div id=\"map\"><img src=\"img/$map\" ></div>
+                <img src=\"img/att/$map\" alt=\"img/att/$map\" style=\" width:100%; height:70%;\" >
                 
-                </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">indietro</a></div>
+                </div><BR><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">indietro</a></div>
                 </div>
             
             <div class=\"InfoEQR\" style=\"float:left;\">
             <br><center><h2>Descrizione<h2></center>
-            <h1> $descrizione </h1>
+            <p> $descrizione </p>
             <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
 
                 </div><br>
