@@ -366,21 +366,40 @@ function AddAttP($id){ //form collega attrazione a percorso
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
     
     $element = "
+
         <form name='form' action='pagin.php' method='GET'>
-        Scegli i tuoi frutti preferiti:
+        Aggiungi le attrazioni:
+        
+        
         <select name='Attrazioni' >
+
+
     ";
     if(mysqli_num_rows($resultset) > 0){
         while($row = mysqli_fetch_array($resultset)){            
-            echo "<option value=\"" . $row['id'] . "\">" . $row['nome'] . "</option>";
+            echo "<option value=" . $row['id'] . ">" . $row['nome'] . "</option>";
         }    
 
     }
         
     $element=$element."     
         </select>
+
+        <style>
+            .salva{
+                background-color: #198754;
+                border-width: thin;
+                border-color: black;
+                color: white;
+            }
+            @media screen and (max-width: 1200px) {
+                .salva {
+                width: 80%;
+                float:center;
+                }
+    </style>
     
-        <input type='submit' value='Conferma'>
+        <input class='salva' type='submit' value='Conferma'>
     
     </form>
     

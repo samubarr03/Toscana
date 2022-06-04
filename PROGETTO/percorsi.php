@@ -173,7 +173,7 @@
                 }
                 if($_SESSION['email']=="admin@gmail.com")
                 $element="
-                <button class=\"dropbtn\"><a href=\"percorsi.php?action=AddAttrazioneApercorso&id=$id\">Inserisci Attrazione al percorso</a></button>   
+                <button class=\"dropbtn\"><a href=\"percorsi.php?action=AddAttrazioneApercorso&id=$id\" style=\"background-color: #198754; color: white;\">Inserisci Attrazione al percorso</a></button>   
                 ";
                 echo $element;    
                 
