@@ -59,7 +59,7 @@
 
     h5 {
         font-size: 2.25rem;
-        color:green;
+        color:#198754;
     }
     h2 {
         display: block;
@@ -73,7 +73,7 @@
         margin-left: 5%;
         margin-right: 5%;
         font-size: 2.25rem;
-        color: green;
+        color: #198754;
     }
     
     .InfoEQR {
@@ -116,7 +116,7 @@
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: green;
+    background-color: #198754;
     border: none;
     border-radius: 50%;
     }
@@ -145,7 +145,7 @@ function component($nome,$id){
                 color: white;
             }
             .rettangolo_percorso{
-                background-color: green;
+                background-color: #198754;
                 width: 50%;
                 margin-left:25%;
                 height: 100%;
@@ -254,7 +254,7 @@ function componentAtt($nome,$id){
                 color: white;
             }
             .rettangolo_percorso{
-                background-color: green;
+                background-color: #198754;
                 width: 50%;
                 margin-left:25%;
                 height: 100%;
@@ -308,7 +308,7 @@ function AddPercorso(){ //form crea percorso
                 <div class=\"row\" style=\"border-color: black, width: 100%\">
                     <h2> Nome:</h2> <input name=\"nome\" ID=\"abc\" type=\"text\">
                 </div>
-                <div class=\"row\" style=\"border-color: green\">
+                <div class=\"row\" style=\"border-color: #198754\">
                     
                         <br>
                         <h2>Scegli immagine </h2> 
@@ -366,7 +366,7 @@ function NewAtt(){ //form crea attrazione
                 <div class=\"row\" style=\"border-color: black, width: 100%\">
                     <h2> Nome:</h2> <input name=\"nome\" value=\"nome\"  ID=\"abc\" type=\"text\">
                 </div>
-                <div class=\"row\" style=\"border-color: green\">
+                <div class=\"row\" style=\"border-color: #198754\">
                     
                         <br>
                         <h2>Scegli immagine </h2> 

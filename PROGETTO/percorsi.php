@@ -230,6 +230,7 @@
                   
                     if($_SESSION['email']=="admin@gmail.com"){
                         $element="
+                        <center>
                         <button class=\"inserisciAttrazioneButton\"><a href=\"percorsi.php?action=AddPercorso\">Inserisci percorso</a></button><br>
                         ";
                         echo $element;

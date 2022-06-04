@@ -85,7 +85,7 @@ INSERT INTO Attrazione VALUES (id,'Piazza dei Miracoli','Grande distesa erbosa c
 INSERT INTO Attrazione VALUES (id,'Cattedrale di Pisa','Imponente cattedrale in marmo bicolore famosa per le porte in bronzo romaniche e il pulpito scolpito del 1300.','43.723293, 10.395036','CattedralediPisa.jpg');
 
 INSERT INTO Attrazione VALUES(id,'Piazza del Campo','Piazza medievale lastricata in mattoni, circondata da eleganti edifici e famosa per ospitare il Palio.','43.318272, 11.331799','piazzadelcampo.jpg');
-INSERT INTO Attrazione VA                            LUES(id,'Duomo di Siena','Edificio del XIII secolo noto per la sua facciata e le sue celebri fasce di marmo bianche e nere.','43.317611, 11.328730','duomodisiena.jpg');
+INSERT INTO Attrazione VALUES(id,'Duomo di Siena','Edificio del XIII secolo noto per la sua facciata e le sue celebri fasce di marmo bianche e nere.','43.317611, 11.328730','duomodisiena.jpg');
 
 INSERT INTO Attrazione VALUES(id,'Terrazza Mascagni','Elegante terrazza sul mare con gazebo e panchine, più vista panoramica sul mare e sul tramonto.','43.534771, 10.298903','terrazzamascagni.jpg');
 INSERT INTO Attrazione VALUES(id,'Acquario Livorno','Specie marine del Mediterraneo e non solo, tra cui squali pinna nera e coralli.','43.535429, 10.299466','acquariolivorno.jpg');
@@ -121,4 +121,4 @@ INSERT INTO Percorso VALUES (id, 'Percorso Barrago', 'Il percorso si svolge dent
 INSERT INTO Percorso VALUES (id, 'Percorso Pisa', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
 
 
-INSERT INTO Utente VALUES (id, 'Admin','Admin', ' 333 333 333', 'admin@gmail.com','e6fe636511f4e52b3d29fe549355fb71e76fa0ec3d394d3dd5b15303dfbf53c0')
+INSERT INTO Utente VALUES (id, ' - ',' - ', ' - ', 'admin@gmail.com','e6fe636511f4e52b3d29fe549355fb71e76fa0ec3d394d3dd5b15303dfbf53c0')

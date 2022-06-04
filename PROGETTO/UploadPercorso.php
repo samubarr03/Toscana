@@ -19,7 +19,6 @@ session_start();
     move_uploaded_file($file_tmp, $upload_percorso.$file_nome);
 
 
-   
 
     
     $sql = "INSERT INTO Percorso VALUES ('id','{$nome}','{$descrizione}','$upload_percorso$file_nome')";    

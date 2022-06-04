@@ -58,7 +58,7 @@ session_start();
                       <h4><?php echo $row['nome'] . " " . $row['cognome'];?></h4><br>
                       <div class="row">
                         <div class="col-sm-12">
-                          <button type="button" style="background-color: #green" href="logout.php">Logout</button>
+                          <button type="button" style="background-color: #198754; color: white; border-width: thin" href="logout.php">Logout</button>
                         </div>
                       </div>
                     </div>
