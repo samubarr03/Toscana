@@ -6,7 +6,7 @@
         <title><?php $nome ?></title> <!-- COME FACCIO A METTERE STO TITOLO? -->
 
         <?php include "includes/css.html"; ?>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
   crossorigin=""/>
@@ -301,24 +301,59 @@ function componentAtt($nome,$id){
 function AddPercorso(){ //form crea percorso
     $element = 
         "
-        <hr>
+        <style>
+        .titoliAddPercorso{
+            color: black;
+            font-size: 30px;
+        }
+        .salva{
+            background-color: #198754;
+            border-width: thin;
+            border-color: black;
+            color: white;
+        }
+        .inputText{
+            width: 100%
+        }
+        @media screen and (max-width: 1200px) {
+            .inputText {
+              width: 80%;
+              float:center;
+            }
+            .titoliAddPercorso{
+                color: black;
+                font-size: 21px;
+            }
+          }
+        </style>
 
+        <hr>
         <div class=\"container\" style=\"border-color: red\">
-            <form method=\"POST\" action=\"UploadPercorso.php\" enctype=\"multipart/form-data\">
-                <div class=\"row\" style=\"border-color: black, width: 100%\">
-                    <h2> Nome:</h2> <input name=\"nome\" ID=\"abc\" type=\"text\">
+            <div class=\"row\">
+                <div class=\"col-2\">
                 </div>
-                <div class=\"row\" style=\"border-color: #198754\">
-                    
-                        <br>
-                        <h2>Scegli immagine </h2> 
-                        <input name=\"img\" type=\"file\" />
-                    
-                    
-                        <h2> descrizione </h2><input name=\"descrizione\" ID=\"abc\" type=\"text\" >
-                        
-                </div>
-            <input ID=\"invia\" type=\"submit\" value=\"Salva\">	
+
+                <div class=\"col-8\">
+                        <form method=\"POST\" action=\"UploadPercorso.php\" enctype=\"multipart/form-data\">
+                            <div class=\"row\" style=\"border-color: black, width: 100%\">
+
+                                <p class=\"titoliAddPercorso\">Inserisci il nome del percorso:</p> <input class=\"inputText\" name=\"nome\" ID=\"abc\" type=\"text\">
+
+                            </div>
+                            <div class=\"row\" style=\"border-color: #198754\">
+                                
+                                <br><p class=\"titoliAddPercorso\">Aggiungi una descrizione:</p><input class=\"inputText\" name=\"descrizione\" ID=\"abc\" type=\"text\" >
+
+                                <br>
+                                <p class=\"titoliAddPercorso\">Scegli immagine:</p> 
+                                <input class=\"inputText\" name=\"img\" type=\"file\" />
+                                    
+                            </div>
+                        <br><center><input class=\"salva\" ID=\"invia\" type=\"submit\" value=\"Salva\"></center>
+                </div>        
+                <div class=\"col-2\">
+                </div>	
+            </div>	
         </div>
         <hr>";
 
