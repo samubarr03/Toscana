@@ -337,12 +337,12 @@ function AddPercorso(){ //form crea percorso
                         <form method=\"POST\" action=\"UploadPercorso.php\" enctype=\"multipart/form-data\">
                             <div class=\"row\" style=\"border-color: black, width: 100%\">
 
-                                <p class=\"titoliAddPercorso\">Inserisci il nome del percorso:</p> <input class=\"inputText\" name=\"nome\" ID=\"abc\" type=\"text\">
+                                <p class=\"titoliAddPercorso\">Inserisci il nome del percorso:</p> <input class=\"inputText\" name=\"nome\" placeholder=\"nome\" ID=\"abc\" type=\"text\">
 
                             </div>
                             <div class=\"row\" style=\"border-color: #198754\">
                                 
-                                <br><p class=\"titoliAddPercorso\">Aggiungi una descrizione:</p><input class=\"inputText\" name=\"descrizione\" ID=\"abc\" type=\"text\" >
+                                <br><p class=\"titoliAddPercorso\">Aggiungi una descrizione:</p><input class=\"inputText\" name=\"descrizione\" placeholder=\"descrizione\" ID=\"abc\" type=\"text\" >
 
                                 <br>
                                 <p class=\"titoliAddPercorso\">Scegli immagine:</p> 
@@ -394,24 +394,64 @@ function AddAttP($id){ //form collega attrazione a percorso
 function NewAtt(){ //form crea attrazione
     $element = 
         "
+        <style>
+        .titoliAddAttrazione{
+            color: black;
+            font-size: 30px;
+        }
+        .salva{
+            background-color: #198754;
+            border-width: thin;
+            border-color: black;
+            color: white;
+        }
+        .inputText{
+            width: 100%
+        }
+        @media screen and (max-width: 1200px) {
+            .inputText {
+              width: 80%;
+              float:center;
+            }
+            .titoliAddAttrazione{
+                color: black;
+                font-size: 21px;
+            }
+          }
+        </style>
+        
         <hr>
-
         <div class=\"container\" style=\"border-color: red\">
-            <form method=\"POST\" action=\"UploadAtt.php\" enctype=\"multipart/form-data\">
-                <div class=\"row\" style=\"border-color: black, width: 100%\">
-                    <h2> Nome:</h2> <input name=\"nome\" value=\"nome\"  ID=\"abc\" type=\"text\">
+            <div class=\"row\">
+                <div class=\"col-2\">
                 </div>
-                <div class=\"row\" style=\"border-color: #198754\">
-                    
-                        <br>
-                        <h2>Scegli immagine </h2> 
-                        <input name=\"img\" type=\"file\" />
-                    
-                    
-                        <h2> descrizione </h2><input name=\"descrizione\" value=\"descrizione\" ID=\"abc\" type=\"text\" >
-                        <h2> descrizione </h2><input name=\"posizione\" value=\"posizione\" ID=\"abc\" type=\"text\" >
-                </div>
-            <input ID=\"invia\" type=\"submit\" value=\"Salva\">	
+
+                <div class=\"col-8\">
+                        <form method=\"POST\" action=\"UploadAtt.php\" enctype=\"multipart/form-data\">
+                            <div class=\"row\" style=\"border-color: black, width: 100%\">
+
+                                <p class=\"titoliAddAttrazione\">Inserisci il nome dell'attrazione:</p> <input class=\"inputText\" name=\"nome\" placeholder=\"nome\" ID=\"abc\" type=\"text\">
+                            </div>
+
+                            <div class=\"row\" style=\"border-color: #198754\">
+                                
+                                <br><p class=\"titoliAddAttrazione\">Aggiungi coordinate:</p><input class=\"inputText\" name=\"posizione\" placeholder=\"41.40338, 2.17403\" ID=\"abc\" type=\"text\" >  
+                            </div>
+
+                            <div class=\"row\" style=\"border-color: #198754\">
+                                
+                                <br><p class=\"titoliAddAttrazione\">Aggiungi una descrizione:</p><input class=\"inputText\" name=\"descrizione\" placeholder=\"descrizione\" ID=\"abc\" type=\"text\" >
+
+                                <br>
+                                <p class=\"titoliAddAttrazione\">Scegli immagine:</p> 
+                                <input class=\"inputText\" name=\"img\" type=\"file\" />  
+                            </div>
+
+                        <br><center><input class=\"salva\" ID=\"invia\" type=\"submit\" value=\"Salva\"></center>
+                </div>        
+                <div class=\"col-2\">
+                </div>	
+            </div>	
         </div>
         <hr>";
 
