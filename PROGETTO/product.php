@@ -460,6 +460,7 @@ function NewAtt(){ //form crea attrazione
 
 
 function generaAtt($nome,$map,$descrizione,$id){
+                   
     $element = 
         "
         <hr>
@@ -474,9 +475,11 @@ function generaAtt($nome,$map,$descrizione,$id){
             <div class=\"InfoEQR\" style=\"float:left;\">
             <br><center><h2>Descrizione<h2></center>
             <p> $descrizione </p>
-            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
-
-                </div><br>
+            
+            
+            <p>
+                $ATTRAZIONI
+            </p>
             
             </div>
             <hr>
