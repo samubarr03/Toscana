@@ -83,27 +83,6 @@
       height:900px;
       background-color:#dfffde;
       }
-      /* width */
-    ::-webkit-scrollbar {
-      width: 15px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey; 
-      border-radius: 10px;
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: #696969; 
-      border-radius: 10px;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #7f7f7f; 
-    }
     #map { 
       height: 75%; width:100%;
       }
@@ -225,7 +204,7 @@ function genera($nome,$map,$descrizione,$id){
         
             }
             $element=$element." 
-            <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
+            <div style=\"width:80%; height:50%; margin-left:10%\">
             </div><BR><div align =\"center\"><a href=\"scanner.php\"; class=\"button2\">Scannerizza Qr code</a></div>
                 </div><br>
             
@@ -326,7 +305,7 @@ function AddPercorso(){ //form crea percorso
             }
           }
         </style>
-
+        
         <hr>
         <div class=\"container\" style=\"border-color: red\">
             <div class=\"row\">
@@ -366,12 +345,15 @@ function AddAttP($id){ //form collega attrazione a percorso
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
     
     $element = "
-
+        <div class=\"row\">
+        <div class=\"col-2\"></div>
+        
+        <div class=\"col-8\">
         <form name='form' action='pagin.php' method='GET'>
         Aggiungi le attrazioni:
         
         
-        <select name='Attrazioni' >
+        <select name='Attrazioni'>
 
 
     ";
@@ -397,14 +379,15 @@ function AddAttP($id){ //form collega attrazione a percorso
                 width: 80%;
                 float:center;
                 }
-    </style>
-    
-        <input class='salva' type='submit' value='Conferma'>
-    
-    </form>
-    
-    <a href=\"percorsi.php?action=NewAttrazione\">CreaNuovaAttrazione</a><i class=\"fas fa-shopping-cart\"></i>
-
+        </style>
+        
+            <input class='salva' type='submit' value='Conferma'>
+        
+        </form>
+        
+        <a href=\"percorsi.php?action=NewAttrazione\">Crea Nuova Attrazione</a><i class=\"fas fa-shopping-cart\"></i>
+        </div>
+        <div class=\"col-2\"></div><br>
     ";
 
     echo $element;
@@ -497,7 +480,7 @@ function generaAtt($nome,$map,$descrizione,$id){
             
             
             <p>
-                $ATTRAZIONI
+                LISTA DI ATTRAZIONI 
             </p>
             
             </div>
