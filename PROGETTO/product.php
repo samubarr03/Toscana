@@ -2,7 +2,6 @@
 <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-       <?php include "leaflet.php"; ?> 
         <title><?php $nome ?></title> <!-- COME FACCIO A METTERE STO TITOLO? -->
 
         <?php include "includes/css.html"; ?>
@@ -160,12 +159,26 @@ function genera($nome,$map,$descrizione,$id){
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 
     $element = 
-        "
+        "<style>
+        #map { 
+            height: 600px; width:1000px;
+            }
+            </style>
+        <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.8.0/dist/leaflet.css\"
+        integrity=\"sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==\"
+        crossorigin=\"\"/>
+        <script src=\"https://unpkg.com/leaflet@1.8.0/dist/leaflet.js\"
+            integrity=\"sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==\"
+            crossorigin=\"\">
+        </script>
         <hr>
         <div class=\"GoogleMaps\" style=\"float:left;\">
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
                 <div id=\"map\"></div>
+                ";
+                include "leaflet.php";
+                $element=$element."
                 </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
                 </div>
             
@@ -445,12 +458,18 @@ function generaAtt($nome,$map,$descrizione,$id){
                    
     $element = 
         "
+        <style>
+        #map { 
+            height: 600px; width:1000px;
+            }
+            </style>
         <hr>
         <div class=\"GoogleMaps\" style=\"float:left;\">
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
                 <img src=\"img/att/$map\" alt=\"img/att/$map\" style=\" width:100%; height:70%;\" >
-                
+                ";include "leaflet.php";
+                "
                 </div><BR><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">indietro</a></div>
                 </div>
             

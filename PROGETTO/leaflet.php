@@ -1,10 +1,4 @@
-<?php 
-$k=0;
-$posizione="12,12";
-include "data.php";
-?>    
 
-<!DOCTYPE html>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin=""/>
@@ -16,6 +10,7 @@ include "data.php";
     <script>
 
     var map = L.map('map').setView([43.668662, 10.807697], 10);
+    var map = L.map('map').setView([51.505, -0.09], 13);
 
     var Bianco = L.icon({
         iconUrl: 'img/Tracker/Bianco.png',
@@ -86,6 +81,8 @@ include "data.php";
     terrazza_mascagni= L.marker([43.534702, 10.298856], {icon: Viola}).bindPopup("Ponte vecchio").addTo(map);
 
     <?php
+    $k=0;
+    $posizione=12.12;
         for($i=0;$i<=$k;$i++)
         {
     ?>

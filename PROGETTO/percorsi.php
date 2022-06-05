@@ -76,11 +76,8 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
         <title>Toscana Tour</title>
-
         <?php include "includes/css.html"; ?>
-
     </head>
     <style>
         /*.card {
@@ -156,7 +153,7 @@
   </section>
 
   <main id="main">
-    
+
   <?php include "includes/clienti.html";?>
   <br>
   </main>
