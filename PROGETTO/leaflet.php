@@ -7,11 +7,12 @@
             integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
             crossorigin="">
         </script>
+    <div id="map"></div>
     <script>
-
-    var map = L.map('map').setView([43.668662, 10.807697], 10);
-    var map = L.map('map').setView([51.505, -0.09], 13);
-
+    var map = L.map('map', {
+        center: [43.668662, 10.807697],
+        zoom: 10
+    });
     var Bianco = L.icon({
         iconUrl: 'img/Tracker/Bianco.png',
         shadowUrl:'img/Tracker/Ombra.png',
@@ -82,7 +83,7 @@
 
     <?php
     $k=0;
-    $posizione=12.12;
+    $posizione="12,12";
         for($i=0;$i<=$k;$i++)
         {
     ?>

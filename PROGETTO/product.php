@@ -175,7 +175,6 @@ function genera($nome,$map,$descrizione,$id){
         <div class=\"GoogleMaps\" style=\"float:left;\">
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
-                <div id=\"map\"></div>
                 ";
                 include "leaflet.php";
                 $element=$element."
@@ -184,6 +183,7 @@ function genera($nome,$map,$descrizione,$id){
             
                 <div class=\"InfoEQR\" style=\"float:left;\">
                 <br><center><h2>Descrizione<h2></center>
+                <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
             ";
 
             if(mysqli_num_rows($resultset) > 0){
@@ -198,6 +198,7 @@ function genera($nome,$map,$descrizione,$id){
             }
             $element=$element." 
             <div style=\"width:80%; height:50%; margin-left:10%\">
+            </div>
             </div><BR><div align =\"center\"><a href=\"scanner.php\"; class=\"button2\">Scannerizza Qr code</a></div>
                 </div><br>
             
