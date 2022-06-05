@@ -1,27 +1,25 @@
 <!DOCTYPE html>
+  <STYLE>/* width */
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
 
-<!DOCTYPE html>
-<STYLE>/* width */
-::-webkit-scrollbar {
-  width: 15px;
-}
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #696969; 
+      border-radius: 10px;
+    }
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #696969; 
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #7f7f7f; 
-}
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7f7f7f; 
+    }
 </style>
 <head>
   <meta charset="utf-8">
@@ -29,7 +27,17 @@
 
   <title>Toscana Tour</title>
 
-   <?php include "includes/css.html"; ?>  
+  <link href="css/aos.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-icons.css" rel="stylesheet">
+<link href="css/boxicons.min.css" rel="stylesheet">
+<link href="css/glightbox.min.css" rel="stylesheet">
+<link href="css/remixicon.css" rel="stylesheet">
+<link href="css/swiper-bundle.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+<link href="img/toscana.png" rel="icon">  
 
 </head>
 

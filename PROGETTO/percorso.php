@@ -9,7 +9,7 @@
   crossorigin=""></script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <script type="text/javascript" src="leaflet.js"></script>
+  <?php include "leaflet.php"; ?>
   <title>[NOME PERCORSO]</title>
 
   <?php include "includes/css.html"; ?>
@@ -117,7 +117,6 @@
     <center><h1>NOME CITTA</h1></center>
         <div style ="margin-left:10%; margin-right:10%; margin-top:1%; opacity: 1000000;">
         <div id="map"></div>
-        <script type="text/javascript" src="leaflet.js"></script> 
         </div><BR><div align ="center"><input type="button" class="button" value="Input Button"></div>
     </div>
     

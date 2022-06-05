@@ -89,7 +89,7 @@ include "data.php";
         for($i=0;$i<=$k;$i++)
         {
     ?>
-        L.marker([<?php echo $posizione;?>]).addTo(mymap).bindPopup("NODATA");
+        var tipregodio = L.marker([ <?php echo $posizione; ?> ], {icon: Viola}).bindPopup("Ponte vecchio").addTo(map);
     <?php
         }
     ?>
