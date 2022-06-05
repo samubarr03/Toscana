@@ -43,7 +43,8 @@
 
         else if($_GET['action']=="AddAttrazioneApercorso"){
             $AddAttP=1;
-            $id=$_GET['id']; 
+            $idP=$_GET['id'];
+            
         }
 
         else if($_GET['action']=="GenAtt"){
@@ -208,9 +209,9 @@
 
             }  
             else if($AddAttP==1){                    
-                AddAttP($id);
+                        AddAttP($idP);
+                    }
 
-             }
 
             else if($AddPercorso==1){                    
                 AddPercorso();

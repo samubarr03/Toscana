@@ -333,58 +333,52 @@ function AddPercorso(){ //form crea percorso
     echo $element;
 }
 
-function AddAttP($id){ //form collega attrazione a percorso
+function AddAttP($idP){
     include "data.php";
-    $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
-    $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
-    
-    $element = "
-        <div class=\"row\">
-        <div class=\"col-2\"></div>
-        
-        <div class=\"col-8\">
-        <form name='form' action='pagin.php' method='GET'>
-        Aggiungi le attrazioni:
-        
-        
-        <select name='Attrazioni'>
-
-
-    ";
+    $sql = "SELECT * FROM attrazione";  
+    $resultset = mysqli_query($conn, $sql);	
     if(mysqli_num_rows($resultset) > 0){
-        while($row = mysqli_fetch_array($resultset)){            
-            echo "<option value=" . $row['id'] . ">" . $row['nome'] . "</option>";
-        }    
+        while($row = mysqli_fetch_array($resultset)){
+            $nome=$row['nome'];
+            $id=$row['id'];
+            $element =
 
+                "<style>
+                    .nome_percorso{
+                        color: white;
+                    }
+                    .rettangolo_percorso{
+                        background-color: #198754;
+                        width: 50%;
+                        margin-left:25%;
+                        height: 100%;
+                        text-align: center;
+                        padding-top:18px;
+                        color: white
+                    }
+                </style> 
+                <div class=\"container text-center position-relative\" data-aos=\"fade-in\"\ data-aos-delay=\"200\" style=\"background:#fff\">
+                    <div class=\"row\">
+                        <div class=\"col-11\">
+                            <div class=\"rettangolo_percorso\">
+                            <a class=\"nome\" href=\"UploadAttP.php?action=$idP&id=$id\">
+                                    <h5 style=\"color:white\">$nome</h5> 
+                                    
+                                </a>
+                            </div>
+                        </div>      
+                        <div class=\"col-1\"> 
+                
+                        </div>
+                    </div>
+                </div>
+                            
+                <hr>
+
+            ";
+            echo $element;
+        }
     }
-        
-    $element=$element."     
-        </select>
-
-        <style>
-            .salva{
-                background-color: #198754;
-                border-width: thin;
-                border-color: black;
-                color: white;
-            }
-            @media screen and (max-width: 1200px) {
-                .salva {
-                width: 80%;
-                float:center;
-                }
-        </style>
-        
-            <input class='salva' type='submit' value='Conferma'>
-        
-        </form>
-        
-        <a href=\"percorsi.php?action=NewAttrazione\">Crea Nuova Attrazione</a><i class=\"fas fa-shopping-cart\"></i>
-        </div>
-        <div class=\"col-2\"></div><br>
-    ";
-
-    echo $element;
 }
 
 function NewAtt(){ //form crea attrazione
