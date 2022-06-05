@@ -2,7 +2,7 @@
 <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <script type="text/javascript" src="leaflet.js"></script>
+       <?php include "leaflet.php"; ?> 
         <title><?php $nome ?></title> <!-- COME FACCIO A METTERE STO TITOLO? -->
 
         <?php include "includes/css.html"; ?>
@@ -16,21 +16,10 @@
   crossorigin=""></script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <script type="text/javascript" src="leaflet.js"></script>
   <title><?php $nome ?></title>
-
   <?php
     include "includes/css.html";
    ?>
-
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-        crossorigin=""/>
-        <!-- Make sure you put this AFTER Leaflet's CSS -->
-        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-            integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-            crossorigin="">
-        </script>
 </head>
 <style>
     .GoogleMaps {
@@ -185,7 +174,6 @@ function genera($nome,$map,$descrizione,$id){
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
                 <div id=\"map\"></div>
-                <script type=\"text/javascript\" src=\"leaflet.js\"></script> 
                 </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
                 </div>
             
