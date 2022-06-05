@@ -13,7 +13,7 @@
 
       scanner.addListener('scan', function (content) {
         console.log(content); //stampa
-        window.location.href=console.log(content);
+        window.location.replace(String(content));
         
       });
 
