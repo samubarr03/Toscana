@@ -16,8 +16,8 @@
     <div id="map"></div>
     <script>
     var map = L.map('map', {
-        center: [43.668662, 10.807697],
-        zoom: 10
+        center: [43.7687,11.265],
+        zoom: 16
     });
     var Bianco = L.icon({
         iconUrl: 'img/Tracker/Bianco.png',

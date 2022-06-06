@@ -119,8 +119,8 @@ INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento deg
 
 
 
-INSERT INTO Percorso VALUES (id, 'Percorso Barrago', 'Il percorso si svolge dentro barrago','collagetoscana.jpg' );
-INSERT INTO Percorso VALUES (id, 'Percorso Pisa', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
+INSERT INTO Percorso VALUES (99, 'Percorso Venezia', 'Il percorso si svolge dentro barrago','collagetoscana.jpg' );
+INSERT INTO Percorso VALUES (98, 'Percorso Firenze', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
 
 
 INSERT INTO Utente VALUES (id, ' - ',' - ', ' - ', 'admin@gmail.com','e6fe636511f4e52b3d29fe549355fb71e76fa0ec3d394d3dd5b15303dfbf53c0')

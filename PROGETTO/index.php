@@ -59,7 +59,9 @@
   <main id="main">
     
   <?php include "includes/clienti.html";?>
-   
+  <b><center><p style="text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50; font-size: 400%">Ultime novità:</p></center></b>
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="margin-left:5%; margin-right:5%">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

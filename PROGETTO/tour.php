@@ -78,7 +78,7 @@
   <main id="main">
     
   <?php include "includes/clienti.html";?>
-    
+    <br>
   <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200" style="background:#fff">
     <div class="Percorsi" >
     <a href="percorsi.php">
@@ -95,7 +95,7 @@
         <img src="img/firenzegiotto.webp" style="width:100%; border-radius:1.1rem;">
         <h1>Tour master</h1>
           <p class="price">$9.99</p>
-          <p>Include la maggior parte delle attrazioni Toscane e vi offrirà un'immersione in maniera approfondita e precisa.</p>
+          <p>Il Tour master include la maggior parte delle attrazioni Toscane e vi offrirà un'immersione in maniera approfondita e precisa.</p>
           <p><button>Acquista</button></p>
       </div>
       </a>
@@ -113,7 +113,7 @@
       </div>
     </div>
   </div>
-  
+  <br>
     </main>
 
   <?php include "includes/footer.php";?>
