@@ -70,6 +70,14 @@ INSERT INTO PercorsoHaAttrazione VALUES (98,5);
 INSERT INTO PercorsoHaAttrazione VALUES (98,0);
 
 
+INSERT INTO PercorsoHaAttrazione VALUES (99,11); 
+INSERT INTO PercorsoHaAttrazione VALUES (99,10);
+INSERT INTO PercorsoHaAttrazione VALUES (99,9);
+
+INSERT INTO PercorsoHaAttrazione VALUES (97,24);
+INSERT INTO PercorsoHaAttrazione VALUES (97,25);
+
+
 
 
 INSERT INTO Attrazione VALUES (id,'Cattedrale di Santa Maria del Fiore','Duomo del 200 noto per la cupola di tegole rosse, la facciata in marmo colorato e il campanile di Giotto.','43.773333, 11.256261','CattedralediSantaMariadelFiore.jpg');
@@ -112,15 +120,12 @@ INSERT INTO Attrazione VALUES(id,'Piazza Grande','Vivace piazza medievale in pen
 INSERT INTO Attrazione VALUES(id,'Piazza del Duomo','Il cuore storico e artistico di Pistoia, che racchiude gli edifici più emblematici della città.','43.933705, 10.917439','piazzadelduomo.jpg');
 
 INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento degli anni 30 progettato da Nervi, con una capienza di circa 50.000 spettatori.','43.780590, 11.282558','fiorentina.jpg');
-INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento degli anni 30 progettato da Nervi, con una capienza di circa 50.000 spettatori.','43.780590, 11.282558','fiorentina.jpg');
-INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento degli anni 30 progettato da Nervi, con una capienza di circa 50.000 spettatori.','43.780590, 11.282558','fiorentina.jpg');
-INSERT INTO Attrazione VALUES(id,'Stadio Artemio Franchi','Stadio di cemento degli anni 30 progettato da Nervi, con una capienza di circa 50.000 spettatori.','43.780590, 11.282558','fiorentina.jpg');
 
 
 
-
-INSERT INTO Percorso VALUES (99, 'Percorso Venezia', 'Il percorso si svolge dentro barrago','collagetoscana.jpg' );
-INSERT INTO Percorso VALUES (98, 'Percorso Firenze', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','zeb89.jpg' );
+INSERT INTO Percorso VALUES (99, 'Percorso Pisa', 'Il percorso si svolge entro i confini della città di Pisa,mostrando le sue bellezze','collagetoscana.jpg' );
+INSERT INTO Percorso VALUES (97, 'Percorso Lucca', 'Il percorso si svolge entro i confini della città di Lucca,mostrando le sue bellezze','collagetoscana.jpg' );
+INSERT INTO Percorso VALUES (98, 'Percorso Firenze', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','collagetoscana.jpg' );
 
 
 INSERT INTO Utente VALUES (id, ' - ',' - ', ' - ', 'admin@gmail.com','e6fe636511f4e52b3d29fe549355fb71e76fa0ec3d394d3dd5b15303dfbf53c0')

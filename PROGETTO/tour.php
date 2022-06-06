@@ -90,22 +90,12 @@
           <p><a href="percorsi.php"><button>Vai subito</button></a></p>
       </div>
       </a>
-      <a href="percorsi.php">
+      <a href="contatti.php">
       <div class="card" style="float: left; margin-left:3%;">
         <img src="img/firenzegiotto.webp" style="width:100%; border-radius:1.1rem;">
         <h1>Tour master</h1>
           <p class="price">$9.99</p>
-          <p>Il Tour master include la maggior parte delle attrazioni Toscane e vi offrirà un'immersione in maniera approfondita e precisa.</p>
-          <p><button>Acquista</button></p>
-      </div>
-      </a>
-
-      <a href="percorsi.php">
-      <div class="card" style="float: left; margin-left:3%;">
-        <img src="img/collagetoscana.jpg" style=" border-radius:1.1rem; width:100%;">
-        <h1>Advanced tour</h1>
-          <p class="price"><font color="red"><DEL>$19.99</del></font> $14.99</p>
-          <p>Questo tour comprende TUTTI i punti di interesse della nostra amata Toscana e vi farà conoscere tuttI i segreti della regione.</p>
+          <p>Il Tour master include una guida delle attrazioni che si vogliono visitare, e va concordata con gli organizzatori</p>
           <p><button>Acquista</button></p>
       </div>
       </a>

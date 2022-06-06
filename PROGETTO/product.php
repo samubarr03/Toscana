@@ -130,7 +130,7 @@ function component($nome,$id){
                             
                             $element=$element."
                           
-                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">-</a>
+                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">Rimuovi</a>
                         
                         ";
                         
@@ -174,29 +174,20 @@ function genera($id,$nome,$posizione){
         <hr>
         <div class=\"GoogleMaps\" style=\"float:left;\">
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
+            
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
                 ";
                 include "leaflet.php";
-                $element=$element."
+                daje($id);
+                $element=$element." 
+
                 </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
                 </div>
             
                 <div class=\"InfoEQR\" style=\"float:left;\">
                 <br><center><h2>Descrizione<h2></center>
                 <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
-            ";
 
-            if(mysqli_num_rows($resultset) > 0){
-                while($row = mysqli_fetch_array($resultset)){
-                    $nome=$row['nome'];
-                    $posizione=$row['posizione'];
-                    $elem = "    
-                    <p>$nome e $posizione</p>";
-                    echo $elem;
-                }    
-        
-            }
-            $element=$element." 
             <div style=\"width:80%; height:50%; margin-left:10%\">
             </div>
             </div><BR><div align =\"center\"><a href=\"scanner.php\"; class=\"button2\">Scannerizza Qr code</a></div>
@@ -253,7 +244,7 @@ function componentAtt($nome,$id){
                             
                             $element=$element."
                           
-                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">-</a>
+                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">Rimuovi</a>
                         
                         ";
                         
