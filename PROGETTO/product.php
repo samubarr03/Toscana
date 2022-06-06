@@ -153,7 +153,7 @@ function component($nome,$id){
 </button>
 */
 
-function genera($id,$nome,$posizione){
+function genera($id,$nome,$descrizione,$posizione){
     include "data.php";
     $sql = "SELECT nome, posizione FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
@@ -187,6 +187,8 @@ function genera($id,$nome,$posizione){
                 <div class=\"InfoEQR\" style=\"float:left;\">
                 <br><center><h2>Descrizione<h2></center>
                 <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
+                <p>$descrizione</p></div>
+            
 
             <div style=\"width:80%; height:50%; margin-left:10%\">
             </div>
