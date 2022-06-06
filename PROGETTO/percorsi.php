@@ -20,12 +20,13 @@
     $AddPercorso=0;
     $NewAtt=0;
     $AddAttP=0;
+    $daje=0;
 
     if(isset($_GET['action'])){
         if($_GET['action']=="AttPercorso"){  //mostra attrazioni di un percorso
             $att=1;
             $id=$_GET['id'];    
-            $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";   
+            $sql = "SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";
         }
 
         else if($_GET['action']=="rimuoviPercorso"){  //rimuove un percorso
@@ -48,7 +49,7 @@
         }
 
         else if($_GET['action']=="GenAtt"){
-    
+
             $GenAtt=1;
             $id=$_GET['id']; 
             $sql = " SELECT * FROM attrazione WHERE id='{$id}'";
@@ -60,8 +61,10 @@
                 
         else if($_GET['action']=="percorso"){  //mostra percorso
             $percorso=1;
+            $daje=1;
             $id=$_GET['id']; 
             $sql = " SELECT * FROM Percorso WHERE id='{$id}'";
+            $sqlAAAA = "SELECT * FROM attrazione, percorsohaattrazione WHERE percorsohaattrazione.IdAttrazione=attrazione.id";
         }
     }    
 
@@ -81,55 +84,7 @@
         <?php include "includes/css.html"; ?>
     </head>
     <style>
-        /*.card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 400px;
-        margin: auto;
-        text-align: center;
-        font-family: arial;
-        background-color: #dfffde;
-        border: 1px solid rgba(0,0,0,.125);
-        border-radius: 1rem;
-        }
-
-        .price {
-        color: #009970;
-        font-size: 200%;
-        }
-
-        .card button {
-        border: none;
-        outline: 0;
-        padding: 12px;
-        color: white;
-        background-color: #009970;
-        text-align: center;
-        cursor: pointer;
-        width: 60%;
-        font-size: 18px;
-        }
-
-        .card button:hover {
-        opacity: 0.7;
-        }
-        #percorsi h1 {
-        margin: 0 0 10px 0;
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 42px;
-        color: #011a00;
-        }
-        #percorsi p{
-            margin: 0 0 3px 0;
-            font-size: 20px;
-            color: #000; 
-        }
-        #percorsi .price {
-        color: #009970;
-        font-size: 200%;
-        font-weight: 500;
-        }*/
-     
+        
         .inserisciAttrazioneButton{
             border: none;
             color: white;
@@ -188,7 +143,7 @@
                 if(mysqli_num_rows($resultset) > 0){                  
                     while($row = mysqli_fetch_array($resultset)){
                     
-                        generaAtt($row['nome'],$row['map'],$row['descrizione'],$row['id']);
+                        generaAtt($row['id'],$row['nome'],$row['descrizione'],$row['img']);
                     }
                 }            
 
@@ -202,12 +157,27 @@
                     
                     while($row = mysqli_fetch_array($resultset)){
                     
-                        genera($row['nome'],$row['map'],$row['descrizione'],$row['id']);
+                        genera($row['id'],$row['nome'],$row['descrizione'],$row['map']);
                     }
   
                 }
 
             }  
+            if($daje==1){
+                
+                $resultset = mysqli_query($conn, $sqlAAAA) or die("database error:". mysqli_error($conn));	
+               
+                if(mysqli_num_rows($resultset) > 0){
+               
+                    
+                    while($row = mysqli_fetch_array($resultset)){
+                    
+                        daje($row['nome'],$row['descrizione'],$row['posizione']);
+                    }
+  
+                }
+
+            }
             else if($AddAttP==1){                    
                         AddAttP($idP);
                     }

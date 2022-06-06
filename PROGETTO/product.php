@@ -153,9 +153,9 @@ function component($nome,$id){
 </button>
 */
 
-function genera($nome,$map,$descrizione,$id){
+function genera($id,$nome,$posizione){
     include "data.php";
-    $sql = "SELECT nome FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
+    $sql = "SELECT nome, posizione FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 
     $element = 
@@ -189,9 +189,9 @@ function genera($nome,$map,$descrizione,$id){
             if(mysqli_num_rows($resultset) > 0){
                 while($row = mysqli_fetch_array($resultset)){
                     $nome=$row['nome'];
+                    $posizione=$row['posizione'];
                     $elem = "    
-                    <h1>$nome</h1>
-                    ";
+                    <p>$nome e $posizione</p>";
                     echo $elem;
                 }    
         
@@ -449,7 +449,7 @@ function NewAtt(){ //form crea attrazione
 }
 
 
-function generaAtt($nome,$map,$descrizione,$id){
+function generaAtt($id,$nome,$descrizione,$img){
                    
     $element = 
         "
@@ -457,26 +457,26 @@ function generaAtt($nome,$map,$descrizione,$id){
         #map { 
             height: 600px; width:1000px;
             }
+        p{
+            text-align: center;
+            text-transform: uppercase;
+            color: #4CAF50;
+            font-size: 60px;
+        }
+        
             </style>
         <hr>
         <div class=\"GoogleMaps\" style=\"float:left;\">
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
                 <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
-                <img src=\"img/att/$map\" alt=\"img/att/$map\" style=\" width:100%; height:70%;\" >
-                ";include "leaflet.php";
-                "
+                <img src=\"img/att/$img\" alt=\"img/att/$img\" style=\" width:100%; height:70%;\" >
                 </div><BR><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">indietro</a></div>
                 </div>
             
             <div class=\"InfoEQR\" style=\"float:left;\">
-            <br><center><h2>Descrizione<h2></center>
-            <p> $descrizione </p>
-            
-            
-            <p>
-                LISTA DI ATTRAZIONI 
-            </p>
-            
+            <br><center><b><p>Descrizione</p></b></center>
+            <p style=\"font-size: 42px; color: #4CAF50; \"> $descrizione </p>
+            <br><center><a href=\"https://it.wikipedia.org/wiki/Galleria_degli_Uffizi\" style=\"font-size: 80px; color: #009970;\">Maggiori info</a></center>
             </div>
             <hr>
         

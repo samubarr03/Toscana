@@ -1,4 +1,10 @@
-
+<?php
+ if($daje==1){
+     
+    $resultset = mysqli_query($conn, $sql);	
+ }
+ else{
+    ?>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin=""/>
@@ -65,7 +71,7 @@
         shadowSize:   [60, 60],
         iconAnchor:   [30, 60],
         shadowAnchor: [30, 60],
-        popupAnchor:  [0, 0]
+        popupAnchor:  [0, -35]
     });
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -75,21 +81,25 @@
         zoomOffset: -1,
         accessToken: 'pk.eyJ1Ijoibm90ZXBhZG1lcmRhIiwiYSI6ImNsMzQybTdyMDByMGQzanA1OXpieXZkeGoifQ.FCnnx6dsGE2ac9b0QFmEkQ'
     }).addTo(map);
-    //Pisa
+    /*
     var torre_di_pisa = L.marker([43.72299544371262, 10.396601950996484], {icon: Blu}).bindPopup('<a href="" >Torre di Pisa</a>').addTo(map), //latitudine = 43.72299544371262 ; longitudine = 10.396601950996484
     piazza_del_duomo = L.marker([43.7228117202109, 10.396330679878247], {icon: Rosso}).bindPopup('Piazza del Duomo').addTo(map), //43.7228117202109 ; 10.396330679878247
     ponte_vecchio= L.marker([43.768040, 11.253175], {icon: Ciano}).bindPopup("Ponte vecchio").addTo(map); // 43.458654 ; 11.253158
     terrazza_mascagni= L.marker([43.534702, 10.298856], {icon: Viola}).bindPopup("Ponte vecchio").addTo(map);
-
+*/
     <?php
-    $k=0;
-    $posizione="12,12";
-        for($i=0;$i<=$k;$i++)
-        {
+    function daje($nome,$descrizione,$posizione){
+        include "data.php";
+        $sql = "SELECT * FROM attrazione, percorsohaattrazione WHERE percorsohaattrazione.IdAttrazione=attrazione.id;";  
+        $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+     if(mysqli_num_rows($resultset) > 0){
+        while($row = mysqli_fetch_array($resultset)){
     ?>
-        var tipregodio = L.marker([ <?php echo $posizione; ?> ], {icon: Viola}).bindPopup("Ponte vecchio").addTo(map);
+        </script><script> var tipregodio = L.marker([ <?php echo $posizione; ?> ], {icon: Viola}).bindPopup("<center><b><?php echo $nome ?></b></center> <br><?php echo $descrizione; ?>").addTo(map);
     <?php
-        }
+        } } }
     ?>
 
-</script><?php?>
+</script><?php
+}
+?>

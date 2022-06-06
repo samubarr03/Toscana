@@ -62,20 +62,22 @@ idAttrazione int REFERENCES Attrazione(id),
 PRIMARY KEY(idPercorso, idAttrazione)
 );
 
-INSERT INTO PercorsoHaAttrazione VALUES (0,1);
-INSERT INTO PercorsoHaAttrazione VALUES (0,2);
-INSERT INTO PercorsoHaAttrazione VALUES (0,3);
-INSERT INTO PercorsoHaAttrazione VALUES (0,4);
+INSERT INTO PercorsoHaAttrazione VALUES (98,1);
+INSERT INTO PercorsoHaAttrazione VALUES (98,2);
+INSERT INTO PercorsoHaAttrazione VALUES (98,3);
+INSERT INTO PercorsoHaAttrazione VALUES (98,4);
+INSERT INTO PercorsoHaAttrazione VALUES (98,5);
+INSERT INTO PercorsoHaAttrazione VALUES (98,0);
 
 
 
 
 INSERT INTO Attrazione VALUES (id,'Cattedrale di Santa Maria del Fiore','Duomo del 200 noto per la cupola di tegole rosse, la facciata in marmo colorato e il campanile di Giotto.','43.773333, 11.256261','CattedralediSantaMariadelFiore.jpg');
-INSERT INTO Attrazione VALUES (id,'Basilica di Santa Croce di Firenze','Chiesa francescana neogotica, nota per gli affreschi di Giotto e le tombe di Michelangelo e Galileo.','43.768613, 11.262143','santa-croce-firenze.jpg');
+INSERT INTO Attrazione VALUES (id,'Basilica di Santa Croce di Firenze','Chiesa francescana neogotica, nota per gli affreschi di Giotto e le tombe di Michelangelo e Galileo.','43.768613, 11.262143','basilicadisantacroce.jpg');
 INSERT INTO Attrazione VALUES (id,'Campanile di Giotto','Torre gotica in marmo rosso, verde e bianco, con scale che portano alla terrazza affacciata sulla città.','43.772722, 11.255678','campanileGiotto.jpg');
 INSERT INTO Attrazione VALUES (id,'Ponte vecchio','Pittoresco ponte ad archi sul fiume, di origine romana, costeggiato da gioiellerie e negozi di souvenir.','43.768027, 11.253169','PonteVecchio.jpg');
 INSERT INTO Attrazione VALUES (id,'Palazzo Pitti','Gallerie in palazzo reale rinascimentale, sedi di vaste collezioni artistiche di maestri italiani ed europei.','43.765302, 11.249910','palazzopitti.jpg');
-INSERT INTO Attrazione VALUES (id,'Galleria degli Uffizi','Edificio del 500 con una vasta collezione di dipinti e capolavori dell"arte dei Primitivi e del Rinascimento.','43.767778, 11.255314','pontevecchio.jpg');
+INSERT INTO Attrazione VALUES (id,'Galleria degli Uffizi','Edificio del 500 con una vasta collezione di dipinti e capolavori dell"arte dei Primitivi e del Rinascimento.','43.7677894,11.2508261','galleriadegliuffizi.jpg');
 
 INSERT INTO Attrazione VALUES (id,'Parco di Serravalle','Parco in zona facilmente raggiungibile, pulito, ordinato, ottimo per fare una corsetta e una passeggiata in compagnia!','43.728965, 10.962536','parcodiserravalle.jpg');
 INSERT INTO Attrazione VALUES (id,'Piazza Farinata degli Uberti','Piazza centrale del nucleo medioevale di Empoli, su cui si affacciano il polo religioso, rappresentato dalla Collegiata di Sant"Andrea, e quello politico, che aveva sede dapprima nel palazzo appartenuto ai conti Guidi, oggi noto come Palazzo Ghibellino, e poi nel Palazzo Pretorio di Empoli.','43.719663, 10.945747','piazzafarinadegliuberti.jpg');
