@@ -163,21 +163,7 @@
                 }
 
             }  
-            if($daje==1){
-                
-                $resultset = mysqli_query($conn, $sqlAAAA) or die("database error:". mysqli_error($conn));	
-               
-                if(mysqli_num_rows($resultset) > 0){
-               
-                    
-                    while($row = mysqli_fetch_array($resultset)){
-                    
-                        daje($row['nome'],$row['descrizione'],$row['posizione']);
-                    }
-  
-                }
 
-            }
             else if($AddAttP==1){                    
                         AddAttP($idP);
                     }

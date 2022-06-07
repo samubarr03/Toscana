@@ -79,18 +79,54 @@
 
 
   /*
+    </script>
+    <?php
+    if($id==98){ //firenze
+        ?> <script>
+    var ponte_vecchio= L.marker([43.768040, 11.253175], {icon: Ciano}).bindPopup("Ponte vecchio").addTo(map); // 43.458654 ; 11.253158   
+        Cattedrale= L.marker([43.773333, 11.256261], {icon: Ciano}).bindPopup("Cattedrale di Santa Maria del Fiore").addTo(map); // 43.458654 ; 11.253158   
+        Basilica= L.marker([43.768613, 11.262143], {icon: Ciano}).bindPopup("Basilica di Santa Croce di Firenze").addTo(map); // 43.458654 ; 11.253158   
+        Pitti= L.marker([43.765302, 11.249910], {icon: Ciano}).bindPopup("Palazzo Pitti").addTo(map); // 43.458654 ; 11.253158   
+   </script>
+    <?php    
+    }
+
+
+    if($id==99){ //pisa
+    ?> <script>
+    var ponte_vecchio= L.marker([43.768040, 11.253175], {icon: Ciano}).bindPopup("Ponte vecchio").addTo(map); // 43.458654 ; 11.253158   
+    </script>
+    <?php    
+    }    
+    
+
+
+    if($id==97){ //lucca
+    ?> <script>
+    var ponte_vecchio= L.marker([43.768040, 11.253175], {icon: Ciano}).bindPopup("Ponte vecchio").addTo(map); // 43.458654 ; 11.253158   
+    </script>
+    <?php    
+    }  
+    ?> 
+<script>
+/*
     var torre_di_pisa = L.marker([43.72299544371262, 10.396601950996484], {icon: Blu}).bindPopup('<a href="" >Torre di Pisa</a>').addTo(map), //latitudine = 43.72299544371262 ; longitudine = 10.396601950996484
     piazza_del_duomo = L.marker([43.7228117202109, 10.396330679878247], {icon: Rosso}).bindPopup('Piazza del Duomo').addTo(map), //43.7228117202109 ; 10.396330679878247
     ponte_vecchio= L.marker([43.768040, 11.253175], {icon: Ciano}).bindPopup("Ponte vecchio").addTo(map); // 43.458654 ; 11.253158
     terrazza_mascagni= L.marker([43.534702, 10.298856], {icon: Viola}).bindPopup("Ponte vecchio").addTo(map);
+
+
+
 */
 </script>
 </html>
     <?php
     function daje($id){
         include "data.php"; 
-        $sql = " SELECT posizione FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
+        
+        $sql = " SELECT * FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
         $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+        
         if(mysqli_num_rows($resultset) > 0){
 
         while($row = mysqli_fetch_array($resultset)){
