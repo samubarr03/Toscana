@@ -95,7 +95,7 @@
         <img src="img/firenzegiotto.webp" style="width:100%; border-radius:1.1rem;">
         <h1>Tour master</h1>
           <p class="price">$9.99</p>
-          <p>Il Tour master include una guida delle attrazioni che si vogliono visitare, e va concordata con gli organizzatori</p>
+          <p>Il Tour master include una guida delle attrazioni che si vogliono visitare, e va concordata con gli organizzatori. [VERSIONE BETA]</p>
           <p><button>Acquista</button></p>
       </div>
       </a>

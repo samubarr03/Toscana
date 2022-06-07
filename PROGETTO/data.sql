@@ -67,7 +67,7 @@ INSERT INTO PercorsoHaAttrazione VALUES (98,2);
 INSERT INTO PercorsoHaAttrazione VALUES (98,3);
 INSERT INTO PercorsoHaAttrazione VALUES (98,4);
 INSERT INTO PercorsoHaAttrazione VALUES (98,5);
-INSERT INTO PercorsoHaAttrazione VALUES (98,0);
+INSERT INTO PercorsoHaAttrazione VALUES (98,6);
 
 
 INSERT INTO PercorsoHaAttrazione VALUES (99,11); 
