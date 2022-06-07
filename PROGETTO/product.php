@@ -130,7 +130,7 @@ function component($nome,$id){
                             
                             $element=$element."
                           
-                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">Rimuovi</a>
+                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">-</a>
                         
                         ";
                         
@@ -153,8 +153,7 @@ function component($nome,$id){
 </button>
 */
 
-function genera($id,$nome,$descrizione,$posizione){
-    
+function genera($id,$nome,$posizione){
     include "data.php";
     $sql = "SELECT nome, posizione FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
@@ -162,7 +161,7 @@ function genera($id,$nome,$descrizione,$posizione){
     $element = 
         "<style>
         #map { 
-            height: 400px; width:600px;
+            height: 600px; width:1000px;
             }
             </style>
         <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.8.0/dist/leaflet.css\"
@@ -175,19 +174,29 @@ function genera($id,$nome,$descrizione,$posizione){
         <hr>
         <div class=\"GoogleMaps\" style=\"float:left;\">
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
+                <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
                 ";
                 include "leaflet.php";
-                $element=$element." 
-
-                <BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
+                $element=$element."
+                </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
                 </div>
             
                 <div class=\"InfoEQR\" style=\"float:left;\">
                 <br><center><h2>Descrizione<h2></center>
                 <div style=\"overflow-y: scroll; width:80%; height:50%; margin-left:10%\">
-                <p>$descrizione</p></div>
-            
+            ";
 
+            if(mysqli_num_rows($resultset) > 0){
+                while($row = mysqli_fetch_array($resultset)){
+                    $nome=$row['nome'];
+                    $posizione=$row['posizione'];
+                    $elem = "    
+                    <p>$nome e $posizione</p>";
+                    echo $elem;
+                }    
+        
+            }
+            $element=$element." 
             <div style=\"width:80%; height:50%; margin-left:10%\">
             </div>
             </div><BR><div align =\"center\"><a href=\"scanner.php\"; class=\"button2\">Scannerizza Qr code</a></div>
@@ -244,7 +253,7 @@ function componentAtt($nome,$id){
                             
                             $element=$element."
                           
-                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">Rimuovi</a>
+                            <a href=\"percorsi.php?action=rimuoviPercorso&id=$id\" class=\"rimuovi\">-</a>
                         
                         ";
                         

@@ -129,7 +129,7 @@
                     <div class=\"row\">
                         <div class=\"col-2\"></div>
                         <div class=\"col-8\">
-                            <button class=\"inserisciAttrazioneButton\"><a href=\"percorsi.php?action=AddAttrazioneApercorso&id=$id\" style=\"background-color: #198754; color: white;\">Inserisci Attrazione al percorso</a></button>   
+                            <button class=\"dropbtn\"><a href=\"percorsi.php?action=AddAttrazioneApercorso&id=$id\" style=\"background-color: #198754; color: white;\">Inserisci Attrazione al percorso</a></button>   
                         </div>
                         <div class=\"col-2\"></div>
                     </div>          
@@ -163,7 +163,21 @@
                 }
 
             }  
+            if($daje==1){
+                
+                $resultset = mysqli_query($conn, $sqlAAAA) or die("database error:". mysqli_error($conn));	
+               
+                if(mysqli_num_rows($resultset) > 0){
+               
+                    
+                    while($row = mysqli_fetch_array($resultset)){
+                    
+                        daje($row['nome'],$row['descrizione'],$row['posizione']);
+                    }
+  
+                }
 
+            }
             else if($AddAttP==1){                    
                         AddAttP($idP);
                     }
