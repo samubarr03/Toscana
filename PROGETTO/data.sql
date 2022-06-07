@@ -114,7 +114,7 @@ INSERT INTO Attrazione VALUES(id,'Museo della Geotermia','La centrale geotermoel
 INSERT INTO Attrazione VALUES(id,'Passegiata di Viareggio','Lungomare di Viareggio,dove prende vita il carnevale tra hotel liberty ,shopping,ristoranti alberghi,é di una bellezza unica.','43.888990, 10.230123','PasseggiataDiViareggio.jpg');
 
 INSERT INTO Attrazione VALUES(id,'Chiesa di San Michele in Foro','Suggestiva chiesa del 1100 con facciata scolpita a più ordini di logge, famosa per la pala di Filippino Lippi.','43.843214, 10.502351','ChiesadiSanMicheleinForo.jpg');
-INSERT INTO Attrazione VALUES(id,'Lucca Comics & games','Lucca Comics cosa da nerd','43.842906, 10.503803','LuccaComics.jpg');
+INSERT INTO Attrazione VALUES(id,'Lucca Comics & Games','Lucca Comics & Games è una fiera internazionale dedicata al fumetto, all'animazione, ai giochi (di ruolo, da tavolo, di carte), ai videogiochi e all'immaginario fantasy e fantascientifico, che si svolge a Lucca in Toscana, nei giorni tra fine ottobre e inizio novembre. È considerata la più importante rassegna italiana del settore, prima d'Europa e seconda al mondo, dopo il Comiket di Tokyo.','43.842906, 10.503803','LuccaComics.jpg');
 
 INSERT INTO Attrazione VALUES(id,'Piazza Grande','Vivace piazza medievale in pendenza, fiancheggiata da edifici cinquecenteschi in pietra, con caffè e negozi d"antiquariato.','43.464702, 11.884271','PiazzaGrandeArezzo.jpg');
 INSERT INTO Attrazione VALUES(id,'Piazza del Duomo','Il cuore storico e artistico di Pistoia, che racchiude gli edifici più emblematici della città.','43.933705, 10.917439','piazzadelduomo.jpg');
@@ -128,4 +128,4 @@ INSERT INTO Percorso VALUES (97, 'Percorso Lucca', 'Il percorso si svolge entro 
 INSERT INTO Percorso VALUES (98, 'Percorso Firenze', 'Il percorso si svolge entro i confini della città di Firenze,mostrando le sue bellezze','collagetoscana.jpg' );
 
 
-INSERT INTO Utente VALUES (id, ' - ',' - ', ' - ', 'admin@gmail.com','e6fe636511f4e52b3d29fe549355fb71e76fa0ec3d394d3dd5b15303dfbf53c0')
+INSERT INTO Utente VALUES (id, ' - ',' - ', ' - ', 'admin@gmail.com','e6fe636511f4e52b3d29fe549355fb71e76fa0ec3d394d3dd5b15303dfbf53c0');
