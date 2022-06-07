@@ -154,6 +154,7 @@ function component($nome,$id){
 */
 
 function genera($id,$nome,$descrizione,$posizione){
+    
     include "data.php";
     $sql = "SELECT nome, posizione FROM attrazione,PercorsohaAttrazione WHERE PercorsoHaAttrazione.idPercorso =".$id." AND Attrazione.id = PercorsoHaAttrazione.idAttrazione";  
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
@@ -161,7 +162,7 @@ function genera($id,$nome,$descrizione,$posizione){
     $element = 
         "<style>
         #map { 
-            height: 600px; width:1000px;
+            height: 400px; width:600px;
             }
             </style>
         <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.8.0/dist/leaflet.css\"
@@ -174,14 +175,11 @@ function genera($id,$nome,$descrizione,$posizione){
         <hr>
         <div class=\"GoogleMaps\" style=\"float:left;\">
             <br><center><h1 style=\"font-size: 80px;\">$nome</h1></center>
-            
-                <div style =\"margin-left:10%; margin-right:10%; margin-top:1%;\">
                 ";
                 include "leaflet.php";
-                daje($id);
                 $element=$element." 
 
-                </div><BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
+                <BR><div align =\"center\"><a href=\"percorsi.php?action=AttPercorso&id=$id\"; class=\"button2\">Visualizza Attrazioni</a></div>
                 </div>
             
                 <div class=\"InfoEQR\" style=\"float:left;\">
